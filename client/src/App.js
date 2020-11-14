@@ -6,6 +6,7 @@ import Footer from "./components/Footer/Footer.js";
 import About from "./components/About";
 import Calendar from "./components/Calendar";
 import Navigation from "./components/Nav/Nav";
+import Jumbo from "./components/Jumbotron/Jumbotron";
 import Registration from "./components/Registration";
 import Roster from "./components/Roster";
 import Sponsor from "./components/Sponsor";
@@ -16,6 +17,7 @@ function App() {
       <div>
         <Navigation/> 
         <Container>
+          <Jumbo />
           <Route exact path="/" component={Home} /> 
         </Container> 
         <Footer />
