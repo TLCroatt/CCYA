@@ -21,9 +21,14 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
+    "bootstrap": "^4.5.3",
     "express": "^4.16.3",
     "if-env": "^1.0.4",
     "mongoose": "^5.3.16",
-    "react-router-dom": "^5.2.0"
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-router-dom": "^5.2.0",
+    "react-strap": "0.0.1",
+    "reactstrap": "^8.7.1"
   }
 }
