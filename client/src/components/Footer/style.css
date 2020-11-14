@@ -1,0 +1,5 @@
+.footer {
+    background: rgb(245,247,247);
+    background: linear-gradient(0deg, rgba(245,247,247,1) 0%, rgba(6,144,23,1) 74%);
+    text-align: center;
+}
