@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Container }from 'reactstrap';
 import Home from "./pages/Home";
 import Footer from "./components/Footer/Footer.js";
@@ -14,14 +14,23 @@ import Sponsor from "./components/Sponsor";
 function App() {
   return (
     <Router>
-      <div>
         <Navigation/> 
-        <Container>
-          <Jumbo />
-          <Route exact path="/" component={Home} /> 
-        </Container> 
+        <Jumbo/>
+        <Switch>
+          <Route path="/about">
+           <About/>
+          </Route>
+          <Route path="/teams">
+            <h1>Teams</h1>
+          </Route>
+          <Route path="/contact">
+            <h1>Contacts</h1>
+          </Route>
+          <Route path="/">
+            <h1>Home</h1>
+          </Route>
+        </Switch>
         <Footer />
-      </div>
     </Router>
     
   );
