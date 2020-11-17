@@ -4,6 +4,8 @@ import { Container }from 'reactstrap';
 import Home from "./pages/Home";
 import Footer from "./components/Footer/Footer.js";
 import About from "./components/About";
+import Contact from "./components/Contact";
+import Teams from "./pages/Teams";
 import Calendar from "./components/Calendar";
 import Navigation from "./components/Nav/Nav";
 import Jumbo from "./components/Jumbotron/Jumbotron";
@@ -18,8 +20,8 @@ function App() {
         <Jumbo/>
         <Switch>
           <Route path="/about" component={About} />
-          {/* <Route path="/teams" component={Teams} />
-          <Route path="/contact" component={Contact} /> */}
+          <Route path="/teams" component={Teams} />
+          <Route path="/contact" component={Contact} />
           <Route path="/home" component={Home} />
         </Switch>
         <Footer />
