@@ -17,18 +17,10 @@ function App() {
         <Navigation/> 
         <Jumbo/>
         <Switch>
-          <Route path="/about">
-           <About/>
-          </Route>
-          <Route path="/teams">
-            <h1>Teams</h1>
-          </Route>
-          <Route path="/contact">
-            <h1>Contacts</h1>
-          </Route>
-          <Route path="/">
-            <h1>Home</h1>
-          </Route>
+          <Route path="/about" component={About} />
+          {/* <Route path="/teams" component={Teams} />
+          <Route path="/contact" component={Contact} /> */}
+          <Route path="/home" component={Home} />
         </Switch>
         <Footer />
     </Router>
