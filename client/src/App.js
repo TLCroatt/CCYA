@@ -1,17 +1,11 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Layout } from "./components/Layout";
-import { Footer } from "./components/Footer/Footer.js";
-import { About } from "./components/About";
-import { Home } from "./components/Home";
-import { Contact } from "./components/Contact";
+import { Home } from "./pages/Home";
 import { Teams } from "./pages/Teams";
-import { Calendar } from "./components/Calendar";
-import { Navigation }  from "./components/Nav/Nav";
 import { Jumbo } from "./components/Jumbotron/Jumbotron";
-import { Registration } from "./components/Registration";
-import { Roster } from "./components/Roster";
-import{ Sponsor } from "./components/Sponsor";
+import { Register } from "./pages/Register";
+import{ Sponsors } from "./pagees/Sponsors";
 
 
 class App extends Component {
@@ -23,9 +17,11 @@ class App extends Component {
             <Navigation />
             <Jumbo />
             <Switch>
-              <Route path="/about" component={About} />
+              <Route path="/members" component={Members} />
+              <Route path="/register" component={Register} />
+              <Route path="/schedule" component={Schedule} />
+              <Route path="/sponsors" component={Sponsors} />
               <Route path="/teams" component={Teams} />
-              <Route path="/contact" component={Contact} />
               <Route path="/home" component={Home} />
             </Switch>
             <Footer />
