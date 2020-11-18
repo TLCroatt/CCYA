@@ -1,8 +1,5 @@
 import React, { useState } from 'react';
-import {
-  BrowserRouter as Router,
-  Link
-} from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import {
   Collapse,
   Navbar,
@@ -10,12 +7,12 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink,
   UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
   DropdownItem
 } from 'reactstrap';
+import './style.css';
 
 export const Navigation = (props) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,24 +21,24 @@ export const Navigation = (props) => {
 
   return (
     <div>
-      <Navbar color="light" light expand="md">
-        <NavbarBrand><Link to="/">Commerce City Youth Athletics</Link></NavbarBrand>
+      <Navbar color="success" light expand="md">
+        <NavbarBrand><NavLink to="/" id="nav-header">Commerce City Youth Athletics</NavLink></NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
             <NavItem>
-            <Link to="/about">About</Link>
+              <NavLink to="/about" id="nav-text">About -</NavLink>
             </NavItem>
             <NavItem>
-            <Link to="/teams">Teams</Link>
+              <NavLink to="/teams" id="nav-text">- Teams -</NavLink>
             </NavItem>
             <NavItem>
-            <Link to="/contact">Contact</Link>
+              <NavLink to="/contact" id="nav-text">- Contact</NavLink>
             </NavItem> 
           </Nav>
           <Nav>
           <UncontrolledDropdown nav inNavbar>
-              <DropdownToggle nav caret>
+              <DropdownToggle nav caret id="nav-options">
                 Options
               </DropdownToggle>
               <DropdownMenu right>

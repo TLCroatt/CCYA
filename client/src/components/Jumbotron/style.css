@@ -1,8 +1,6 @@
 .jumbotron {
     color: yellow;
-    text-shadow: black 0.2em 0.2em 0.2em;
-
-  
+    text-shadow: black 0.2em 0.2em 0.2em; 
 }
 
 p {
@@ -10,9 +8,11 @@ p {
     text-shadow: black 2px 2px;
 }
 
-
-
 h1 {
     color: green;
+}
+
+#register-btn{
+    color: yellow;
 }
 

@@ -1,37 +1,35 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import  Layout  from "./components/Layout";
-import  Home  from "./pages/Home";
-import  Teams  from "./pages/Teams";
-import  Register  from "./pages/Register";
-import Sponsors  from "./pages/Sponsors";
+import Home from "./pages/Home";
+import Teams from "./pages/Teams";
+import Register from "./pages/Register";
+import Sponsors from "./pages/Sponsors";
 import Members from "./pages/Members";
 import Schedule from "./pages/Schedule";
+import Navbar from "./components/Nav/Nav";
+import Jumbotron from "./components/Jumbotron/Jumbotron"
+import Footer from "./components/Footer/Footer";
+import Wrapper from "./components/Wrapper/Wrapper"
 
 
-class App extends Component {
-  render() {
+function App() {
     return (
-      <React.Fragment>
-        <Layout>
-          <Router>
-            
-            
+      <Router>
+        <Wrapper>
+          <Navbar />
+          <Jumbotron />
             <Switch>
               <Route path="/members" component={Members} />
               <Route path="/register" component={Register} />
               <Route path="/schedule" component={Schedule} />
               <Route path="/sponsors" component={Sponsors} />
               <Route path="/teams" component={Teams} />
-              <Route path="/home" component={Home} />
+              <Route path="/" component={Home} />
             </Switch>
-            
-          </Router>
-        </Layout>
-      </React.Fragment>
+          <Footer />
+        </Wrapper>
+      </Router>
     );
-  }
-
 }
 
 export default App;
