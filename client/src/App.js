@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { Layout } from "./components/Layout";
-import { Home } from "./pages/Home";
-import { Teams } from "./pages/Teams";
-import { Jumbo } from "./components/Jumbotron/Jumbotron";
-import { Register } from "./pages/Register";
-import{ Sponsors } from "./pagees/Sponsors";
+import  Layout  from "./components/Layout";
+import  Home  from "./pages/Home";
+import  Teams  from "./pages/Teams";
+import  Register  from "./pages/Register";
+import Sponsors  from "./pages/Sponsors";
+import Members from "./pages/Members";
+import Schedule from "./pages/Schedule";
 
 
 class App extends Component {
@@ -14,8 +15,8 @@ class App extends Component {
       <React.Fragment>
         <Layout>
           <Router>
-            <Navigation />
-            <Jumbo />
+            
+            
             <Switch>
               <Route path="/members" component={Members} />
               <Route path="/register" component={Register} />
@@ -24,7 +25,7 @@ class App extends Component {
               <Route path="/teams" component={Teams} />
               <Route path="/home" component={Home} />
             </Switch>
-            <Footer />
+            
           </Router>
         </Layout>
       </React.Fragment>
