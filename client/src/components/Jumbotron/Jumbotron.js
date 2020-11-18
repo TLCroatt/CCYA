@@ -3,7 +3,7 @@ import { Jumbotron, Button, Container } from 'reactstrap';
 import background from '../../assets/softball.jpeg';
 import "./style.css";
 
-const Jumbo = (props) => {
+export const Jumbo = (props) => {
   return (
     
       <Container fluid style={{backgroundImage: `url(${background})`, maxWidth: '988px', maxHeight: '513px', borderRadius: '5px'}}>

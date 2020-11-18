@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
 import {
+  BrowserRouter as Router,
+  Link
+} from "react-router-dom";
+import {
   Collapse,
   Navbar,
   NavbarToggler,
@@ -13,7 +17,7 @@ import {
   DropdownItem
 } from 'reactstrap';
 
-const Navigation = (props) => {
+export const Navigation = (props) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
@@ -21,18 +25,18 @@ const Navigation = (props) => {
   return (
     <div>
       <Navbar color="light" light expand="md">
-        <NavbarBrand href="../pages/Home.js">Commerce City Youth Athletics</NavbarBrand>
+        <NavbarBrand><Link to="/">Commerce City Youth Athletics</Link></NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
             <NavItem>
-              <NavLink href="">Teams</NavLink>
+            <Link to="/about">About</Link>
             </NavItem>
             <NavItem>
-              <NavLink href="">Contact</NavLink>
+            <Link to="/teams">Teams</Link>
             </NavItem>
             <NavItem>
-              <NavLink href="">About</NavLink>
+            <Link to="/contact">Contact</Link>
             </NavItem> 
           </Nav>
           <Nav>
