@@ -1,14 +1,16 @@
 .jumbotron {
-    margin-bottom: 0px;
-    background-image: url(../../assets/softball.jpeg); 
-    background-position: 0% 25%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    color: white;
+    color: yellow;
     text-shadow: black 0.2em 0.2em 0.2em;
 }
 
-.display-2 {
-    color: green;
-    margin:
+p {
+    color: yellow;
+    text-shadow: black 2px 2px;
 }
+
+
+
+h1 {
+    color: green;
+}
+
