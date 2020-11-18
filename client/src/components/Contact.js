@@ -3,7 +3,7 @@ import { Container, Row, Col } from 'reactstrap';
 import "./about.css";
 
 
-const Contact = (props) => {
+ export const Contact = (props) => {
   return (
     <Container>
       <div>
