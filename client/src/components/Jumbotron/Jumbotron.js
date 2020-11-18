@@ -2,7 +2,7 @@ import React from 'react';
 import { Jumbotron, Button } from 'reactstrap';
 import "./style.css";
 
-const Jumbo = (props) => {
+export const Jumbo = (props) => {
   return (
     <div className="jumbotron">
       <Jumbotron>

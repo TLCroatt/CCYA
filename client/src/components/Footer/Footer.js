@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.css";
-function Footer() {
+export const Footer = (props) => {
   return (
     <footer className="text-center fixed-bottom footer">
       <div className="card-footer">

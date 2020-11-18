@@ -1,30 +1,35 @@
-import React from 'react';
-import { BrowserRouter as Router, Route } from "react-router-dom";
-import { Container }from 'reactstrap';
-import Home from "./pages/Home";
-import Footer from "./components/Footer/Footer.js";
-import About from "./components/About";
-import Calendar from "./components/Calendar";
-import Navigation from "./components/Nav/Nav";
-import Jumbo from "./components/Jumbotron/Jumbotron";
-import Registration from "./components/Registration";
-import Roster from "./components/Roster";
-import Sponsor from "./components/Sponsor";
+import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { Layout } from "./components/Layout";
+import { Home } from "./pages/Home";
+import { Teams } from "./pages/Teams";
+import { Jumbo } from "./components/Jumbotron/Jumbotron";
+import { Register } from "./pages/Register";
+import{ Sponsors } from "./pagees/Sponsors";
 
-function App() {
-  return (
-    <Router>
-      <div>
-        <Navigation/> 
-        <Container>
-          <Jumbo />
-          <Route exact path="/" component={Home} /> 
-        </Container> 
-        <Footer />
-      </div>
-    </Router>
-    
-  );
+
+class App extends Component {
+  render() {
+    return (
+      <React.Fragment>
+        <Layout>
+          <Router>
+            <Navigation />
+            <Jumbo />
+            <Switch>
+              <Route path="/members" component={Members} />
+              <Route path="/register" component={Register} />
+              <Route path="/schedule" component={Schedule} />
+              <Route path="/sponsors" component={Sponsors} />
+              <Route path="/teams" component={Teams} />
+              <Route path="/home" component={Home} />
+            </Switch>
+            <Footer />
+          </Router>
+        </Layout>
+      </React.Fragment>
+    );
+  }
 }
 
 export default App;
