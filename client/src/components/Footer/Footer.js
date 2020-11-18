@@ -1,5 +1,6 @@
 import React from "react";
 import "./style.css";
+
 export const Footer = (props) => {
   return (
     <footer className="text-center fixed-bottom footer">
