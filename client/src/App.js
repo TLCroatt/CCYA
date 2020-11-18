@@ -30,6 +30,7 @@ class App extends Component {
       </React.Fragment>
     );
   }
+
 }
 
 export default App;
