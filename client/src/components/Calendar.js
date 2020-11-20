@@ -1,22 +1,20 @@
-import React from 'react';
-import { Container, Row, Col } from 'reactstrap';
-import "./about.css";
+// import React from 'react';
+// import Calendar from "react-calendar";
 
+// export const ReactCalendar = () => {
+//   const [date, setDate] = useState(new Date());
 
-const Calendar = (props) => {
-  return (
-    <Container>
-      <Row>
-        <Col>.col</Col>
-      </Row>
-      <Row>
-        <Col>.col</Col>
-      </Row>
-      <Row>
-        <Col>.col</Col>
-      </Row>
-    </Container>
-  );
-}
+//   const onChange = date => {
+//     setDate(date);
+//   };
 
-export default Calendar;
+//   return (
+//     <div>
+//       <Calendar onChange={onChange} value={date} />
+//     </div>
+//   );
+// };
+
+// render(<ReactCalendar />, document.querySelector("#root"));
+
+// export default Calendar;

@@ -35,6 +35,9 @@ export const Navigation = (props) => {
             <NavItem>
               <NavLink to="/contact" id="nav-text">- Contact</NavLink>
             </NavItem> 
+            <NavItem>
+              <NavLink to="/calendar" id="nav-text">- Calendar</NavLink>
+            </NavItem> 
           </Nav>
           <Nav>
           <UncontrolledDropdown nav inNavbar>

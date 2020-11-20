@@ -10,6 +10,7 @@ import Navbar from "./components/Nav/Nav";
 import Jumbotron from "./components/Jumbotron/Jumbotron"
 import Footer from "./components/Footer/Footer";
 import Wrapper from "./components/Wrapper/Wrapper"
+import Calendar from "./components/Calendar";
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
           <Navbar />
           <Jumbotron />
             <Switch>
+            <Route path="/calendar" component={Calendar} />
               <Route path="/members" component={Members} />
               <Route path="/register" component={Register} />
               <Route path="/schedule" component={Schedule} />
