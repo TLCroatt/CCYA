@@ -11,6 +11,7 @@ import Jumbotron from "./components/Jumbotron/Jumbotron"
 import Footer from "./components/Footer/Footer";
 import Wrapper from "./components/Wrapper/Wrapper"
 import Calendar from "./components/Calendar";
+import './App.css';
 
 
 function App() {
