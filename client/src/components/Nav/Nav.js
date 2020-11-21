@@ -43,8 +43,8 @@ export const Navigation = (props) => {
                 Options
               </DropdownToggle>
               <DropdownMenu right>
-                <DropdownItem>
-                 Log In
+                <DropdownItem tag={Link} to="/login">
+                 Login 
                 </DropdownItem>
                 <DropdownItem>
                   Sign Up
