@@ -6,6 +6,7 @@ import {
   NavbarToggler,
   NavbarBrand,
   Nav,
+  NavLink,
   NavItem,
   UncontrolledDropdown,
   DropdownToggle,
@@ -27,16 +28,13 @@ export const Navigation = (props) => {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
             <NavItem>
-              <NavLink tag={Link} to="/" id="nav-text">About -</NavLink>
+              <NavLink tag={Link} to="/teams" id="nav-text">Teams</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink tag={Link} to="/teams" id="nav-text">- Teams -</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink tag={Link} to="/contact" id="nav-text">- Contact</NavLink>
+              <NavLink tag={Link} to="/contact" id="nav-text">Contact</NavLink>
             </NavItem> 
             <NavItem>
-              <NavLink tag={Link} to="/calendar" id="nav-text">- Calendar</NavLink>
+              <NavLink tag={Link} to="/calendar" id="nav-text">Calendar</NavLink>
             </NavItem> 
           </Nav>
           <Nav>
