@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import {
   Collapse,
   Navbar,
@@ -22,21 +22,21 @@ export const Navigation = (props) => {
   return (
     <div>
       <Navbar color="success" light expand="md">
-        <NavbarBrand><NavLink to="/" id="nav-header">Commerce City Youth Athletics</NavLink></NavbarBrand>
+        <NavbarBrand><NavLink tag={Link} to="/" id="nav-header">Commerce City Youth Athletics</NavLink></NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
             <NavItem>
-              <NavLink to="/about" id="nav-text">About -</NavLink>
+              <NavLink tag={Link} to="/" id="nav-text">About -</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink to="/teams" id="nav-text">- Teams -</NavLink>
+              <NavLink tag={Link} to="/teams" id="nav-text">- Teams -</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink to="/contact" id="nav-text">- Contact</NavLink>
+              <NavLink tag={Link} to="/contact" id="nav-text">- Contact</NavLink>
             </NavItem> 
             <NavItem>
-              <NavLink to="/calendar" id="nav-text">- Calendar</NavLink>
+              <NavLink tag={Link} to="/calendar" id="nav-text">- Calendar</NavLink>
             </NavItem> 
           </Nav>
           <Nav>
