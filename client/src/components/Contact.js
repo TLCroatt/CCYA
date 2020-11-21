@@ -1,6 +1,5 @@
 import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
-import "./about.css";
 
 
  export const Contact = (props) => {
