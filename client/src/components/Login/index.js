@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import UserContext from '../../utils/UserContext';
+import './style.css'
 
 const Login = () => {
   const { userData, handleInputChange, handleLogin } = useContext(UserContext);
@@ -10,7 +11,7 @@ const Login = () => {
       <h2 className="loginTitle">Login</h2>
       <hr />
       <Form>
-        <FormGroup>
+        <FormGroup className="form-group">
           <Label for="username">Username</Label>
           <Input
             type="text"
@@ -21,7 +22,7 @@ const Login = () => {
             onChange={handleInputChange}
           />
         </FormGroup>
-        <FormGroup>
+        <FormGroup className="form-group">
           <Label for="password">Password</Label>
           <Input
             type="password"
@@ -32,11 +33,10 @@ const Login = () => {
             onChange={handleInputChange}
           />
         </FormGroup>
-        <Button onClick={handleLogin} color="success" block>
+        <Button onClick={handleLogin} color="success" size="lg">
           Login
         </Button>
-        <p className="signupLink">
-          <Link to="/signup">dont have an account? Sign up here</Link>
+        <p>Don't have an account? <Link className="signup-link" to="/signup">Sign up here</Link>
         </p>
       </Form>
     </div>
