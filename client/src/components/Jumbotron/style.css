@@ -3,13 +3,20 @@
     text-shadow: black 0.2em 0.2em 0.2em; 
 }
 
-p {
-    color: yellow;
-    text-shadow: black 2px 2px;
-}
-
 h1 {
     color: green;
+    text-shadow:  black 2px 2px;
+}
+
+.lead {
+    color: yellow;
+    text-shadow: black 2px 2px;
+    font-size: 35px;
+    margin-top: 30px;
+}
+
+.quote {
+    font-size: 20px;;
 }
 
 #register-btn{
@@ -32,5 +39,4 @@ h1 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white;
   }

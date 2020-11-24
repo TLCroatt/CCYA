@@ -22,7 +22,7 @@ export const Navigation = (props) => {
 
   return (
     <div>
-      <Navbar color="success" light expand="md">
+      <Navbar className="navbar" light expand="md">
         <NavbarBrand><NavLink tag={Link} to="/" id="nav-header">Commerce City Youth Athletics</NavLink></NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>

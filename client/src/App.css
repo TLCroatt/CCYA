@@ -1,5 +1,9 @@
 body {
-    background-image: './assets/softball.jpeg';
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1200px;
 }
 
 .carousel {

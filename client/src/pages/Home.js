@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Card, Button, CardImg, CardTitle, CardText, CardGroup, CardSubtitle, CardBody, Container, Row, Col, Carousel, CarouselItem, CarouselControl, CarouselIndicators, CarouselCaption } from 'reactstrap';
 import Logo from '../assets/logo.jpg';
+import Jumbotron from '../components/Jumbotron/Jumbotron'
 
 
 const items = [
@@ -56,6 +57,8 @@ const Home = (props) => {
   });
 
   return (
+    <div>
+    <Jumbotron />
     <Container>
       <CardGroup>
         <Card>
@@ -112,6 +115,7 @@ const Home = (props) => {
         <CarouselControl direction="next" directionText="Next" onClickHandler={next} />
       </Carousel>
     </Container>
+    </div>
   );
 };
 
