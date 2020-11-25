@@ -20,8 +20,8 @@ export const Footer = (props) => {
         <Col sm="4">
           Phone: 303.286.7669
         </Col>
-        <Col sm="4">
-          6820 East 77th Avenue
+        <Col sm="4" id="address">
+          6820 East 77th Avenue,
           Commerce City, CO 80022
         </Col>
         <Col sm="4">
