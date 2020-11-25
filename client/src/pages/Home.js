@@ -3,6 +3,7 @@ import { Card, Button, CardImg, CardTitle, CardText, CardGroup, CardBody, Contai
 import Logo from '../assets/SBLogo.jpg';
 import SB6 from '../assets/SB6.JPG';
 import Jumbotron from '../components/Jumbotron/Jumbotron';
+import Footer from '../components/Footer/Footer'
 
 const items = [
   {
@@ -79,10 +80,10 @@ const Home = () => {
       </Container>
       <Row>
         <Col md="8" className="mx-auto">
-          <UncontrolledCarousel items={items} />
+          <UncontrolledCarousel className="carousel" items={items} />
         </Col>
       </Row>  
-    
+      <Footer />
     </div>
   );
 };

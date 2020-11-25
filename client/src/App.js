@@ -7,8 +7,8 @@ import LoginPage from "./pages/Login";
 import Signup from "./pages/Signup"
 import Members from "./pages/Members";
 import Navbar from "./components/Nav/Nav";
-import Footer from "./components/Footer/Footer";
 import Calendar from "./components/Calendar";
+import Contact from "./pages/Contact";
 import './App.css';
 import UserContext from "../src/utils/UserContext";
 import API from "../src/utils/API"
@@ -144,9 +144,9 @@ const App = () => {
               <Route path="/login" render={() => <LoginPage />}/>
               <Route path="/signup" render={() => <Signup />}/>
               <Route path="/teams" component={Teams} />
+              <Route path="/contact" component={Contact} />
               <Route path="/" component={Home} />
             </Switch>
-          <Footer />
       </Router>
       </UserContext.Provider>
     );

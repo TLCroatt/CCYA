@@ -1,10 +1,12 @@
 import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
+import Footer from '../components/Footer/Footer'
 
 
 
 export const Teams = (props) => {
   return (
+    <div>
     <Container>
       <div>
         <h2>Teams Page</h2>
@@ -23,6 +25,8 @@ export const Teams = (props) => {
       </Row>
 
     </Container>
+    <Footer />
+    </div>
   );
 }
 

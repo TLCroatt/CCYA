@@ -1,11 +1,13 @@
 import React from 'react';
-import { Container, Card, CardText, CardGroup, CardBody, } from 'reactstrap';
+import { Container, Card, CardTitle, CardText, CardGroup, CardBody, } from 'reactstrap';
 import Schedule from '../components/Calendar'
+import Footer from '../components/Footer/Footer'
 
 
 
 export const Members = (props) => {
   return (
+    <div>
     <Container>
       <CardGroup>
         <Card>
@@ -25,8 +27,10 @@ export const Members = (props) => {
         </Card>
       </CardGroup>
      
-
+  
     </Container>
+    <Footer />
+    </div>
   );
 }
 
