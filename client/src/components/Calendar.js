@@ -1,20 +1,38 @@
-// import React from 'react';
-// import Calendar from "react-calendar";
+import React, { Component } from "react";
+import { Calendar, momentLocalizer } from "react-big-calendar";
+import moment from "moment";
 
-// export const ReactCalendar = () => {
-//   const [date, setDate] = useState(new Date());
 
-//   const onChange = date => {
-//     setDate(date);
-//   };
+import "react-big-calendar/lib/css/react-big-calendar.css";
 
-//   return (
-//     <div>
-//       <Calendar onChange={onChange} value={date} />
-//     </div>
-//   );
-// };
+const localizer = momentLocalizer(moment);
 
-// render(<ReactCalendar />, document.querySelector("#root"));
+class App extends Component {
+  state = {
+    events: [
+      {
+        start: moment().toDate(),
+        end: moment()
+          .add(1, "days")
+          .toDate(),
+        title: "Some title"
+      }
+    ]
+  };
 
-// export default Calendar;
+  render() {
+    return (
+      <div className="App">
+        <Calendar
+          localizer={localizer}
+          defaultDate={new Date()}
+          defaultView="month"
+          events={this.state.events}
+          style={{ height: "100vh" }}
+        />
+      </div>
+    );
+  }
+}
+
+export default App;

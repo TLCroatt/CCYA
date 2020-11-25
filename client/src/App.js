@@ -9,7 +9,7 @@ import Schedule from "./pages/Schedule";
 import Navbar from "./components/Nav/Nav";
 import Footer from "./components/Footer/Footer";
 import Calendar from "./components/Calendar";
-import './App.css';
+
 
 
 function App() {
