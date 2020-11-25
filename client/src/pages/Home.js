@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Card, Button, CardImg, CardTitle, CardText, CardGroup, CardSubtitle, CardBody, Container, Row, Col, UncontrolledCarousel } from 'reactstrap';
-import Logo from '../assets/logo.jpg';
+import Logo from '../assets/SBLogo.jpg';
+import SB6 from '../assets/SB6.JPG';
 import Jumbotron from '../components/Jumbotron/Jumbotron'
-import SB1 from "../assets/SB1.JPG";
-import SB2 from "../assets/SB2.JPG"
+import SB1 from "../assets/softball.jpeg";
+import SB2 from "../assets/SB2.JPG";
 import SB3 from "../assets/SB3.JPG";
 
 const items = [
@@ -11,24 +12,26 @@ const items = [
     src: {SB1},
     altText: 'Slide 1',
     caption: 'Slide 1',
-    key: '1'
+    header: "",
+    key: '1',
   },
   {
     src: {SB2},
     altText: 'Slide 2',
     caption: 'Slide 2',
-    key: '2'
+    header: "",
+    key: '2',
   },
   {
     src: {SB3},
     altText: 'Slide 3',
     caption: 'Slide 3',
-    key: '3'
-  }
+    header: "",
+    key: '3',
+  },
 ];
 
-const Home = (props) => {
-  
+const Home = () => {
 
   return (
     <div>
@@ -43,11 +46,10 @@ const Home = (props) => {
           <CardImg top width="100%" src={ Logo } alt="Card image cap" />
         </Card>
         <Card>
-          <CardImg top width="100%" src="" alt="Card image cap" />
+          <CardImg top width="100%" src={ SB6 } alt="Card image cap" />
           <CardBody>
-            <CardTitle tag="h5">Card title</CardTitle>
-            <CardSubtitle tag="h6" className="mb-2 text-muted">Card subtitle</CardSubtitle>
-            <CardText>This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</CardText>
+            <CardTitle tag="h5">Sponsors</CardTitle>
+            <CardText>We could insert one image with all of the sponsor's logos compiled into</CardText>
             <Button>Button</Button>
           </CardBody>
         </Card>
@@ -77,10 +79,13 @@ const Home = (props) => {
           Commerce City, CO 80022
         </Col>
       </Row>
+      </Container>
       <Row>
-      <UncontrolledCarousel items={items} />
+        <Col md="8" className="mx-auto">
+          <UncontrolledCarousel items={items} />
+        </Col>
       </Row>  
-    </Container>
+    
     </div>
   );
 };
