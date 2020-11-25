@@ -13,7 +13,6 @@ import {
   DropdownMenu,
   DropdownItem
 } from 'reactstrap';
-import Signup from '../Signupform';
 import './style.css';
 
 export const Navigation = (props) => {
@@ -33,9 +32,6 @@ export const Navigation = (props) => {
             </NavItem>
             <NavItem>
               <NavLink tag={Link} to="/contact" id="nav-text">Contact</NavLink>
-            </NavItem> 
-            <NavItem>
-              <NavLink tag={Link} to="/calendar" id="nav-text">Calendar</NavLink>
             </NavItem> 
           </Nav>
           <Nav>
