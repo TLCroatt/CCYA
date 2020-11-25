@@ -1,34 +1,31 @@
 import React from 'react';
-import { Card, Button, CardImg, CardTitle, CardText, CardGroup, CardSubtitle, CardBody, Container, Row, Col, UncontrolledCarousel } from 'reactstrap';
+import { Card, Button, CardImg, CardTitle, CardText, CardGroup, CardBody, Container, Row, Col, UncontrolledCarousel } from 'reactstrap';
 import Logo from '../assets/SBLogo.jpg';
 import SB6 from '../assets/SB6.JPG';
-import Jumbotron from '../components/Jumbotron/Jumbotron'
-import SB1 from "../assets/softball.jpeg";
-import SB2 from "../assets/SB2.JPG";
-import SB3 from "../assets/SB3.JPG";
+import Jumbotron from '../components/Jumbotron/Jumbotron';
 
 const items = [
   {
-    src: {SB1},
+    src: './images/SB1.JPG',
     altText: 'Slide 1',
     caption: 'Slide 1',
     header: "",
     key: '1',
   },
   {
-    src: {SB2},
+    src: './images/SB2.JPG',
     altText: 'Slide 2',
     caption: 'Slide 2',
     header: "",
     key: '2',
   },
   {
-    src: {SB3},
+    src: './images/SB3.JPG',
     altText: 'Slide 3',
     caption: 'Slide 3',
     header: "",
     key: '3',
-  },
+  }
 ];
 
 const Home = () => {
