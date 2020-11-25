@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Card, Button, CardImg, CardTitle, CardText, CardGroup, CardSubtitle, CardBody, Container, Row, Col, UncontrolledCarousel } from 'reactstrap';
-import Logo from '../assets/logo.jpg';
+import Logo from '../assets/SBLogo.jpg';
 import Jumbotron from '../components/Jumbotron/Jumbotron'
 import SB1 from "../assets/SB1.JPG";
 import SB2 from "../assets/SB2.JPG"

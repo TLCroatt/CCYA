@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import Teams from "./pages/Teams";
 import Register from "./pages/Register";
 import LoginPage from "./pages/Login";
+import Signup from "./pages/Signup"
 import Members from "./pages/Members";
 import Schedule from "./pages/Schedule";
 import Navbar from "./components/Nav/Nav";
@@ -22,6 +23,7 @@ function App() {
               <Route path="/register" component={Register} />
               <Route path="/schedule" component={Schedule} />
               <Route path="/login" render={() => <LoginPage />}/>
+              <Route path="/signup" render={() => <Signup />}/>
               <Route path="/teams" component={Teams} />
               <Route path="/" component={Home} />
             </Switch>

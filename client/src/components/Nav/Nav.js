@@ -13,6 +13,7 @@ import {
   DropdownMenu,
   DropdownItem
 } from 'reactstrap';
+import Signup from '../Signupform';
 import './style.css';
 
 export const Navigation = (props) => {
@@ -46,7 +47,7 @@ export const Navigation = (props) => {
                 <DropdownItem tag={Link} to="/login">
                  Login 
                 </DropdownItem>
-                <DropdownItem>
+                <DropdownItem tag={Link} to="/signup">
                   Sign Up
                 </DropdownItem>
               </DropdownMenu>
