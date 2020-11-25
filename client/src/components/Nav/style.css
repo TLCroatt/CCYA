@@ -1,9 +1,15 @@
+.navbar {
+    background-color: green;
+}
+
 #nav-header{
     color: yellow;
+    font-size: 30px;
 }
 
  #nav-text{
      color: white;
+     font-size: 25px;;
  }
 
  #nav-options{

@@ -1,0 +1,11 @@
+.form-container {
+    background-color: green;
+    padding: 30px;
+    margin-top: 50px;
+    width: 700px;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+}
+
+

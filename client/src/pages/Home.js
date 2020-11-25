@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import { Card, Button, CardImg, CardTitle, CardText, CardGroup, CardSubtitle, CardBody, Container, Row, Col, Carousel, CarouselItem, CarouselControl, CarouselIndicators, CarouselCaption } from 'reactstrap';
+import Logo from '../assets/logo.jpg';
+import Jumbotron from '../components/Jumbotron/Jumbotron'
+
 
 const items = [
   {
@@ -54,14 +57,16 @@ const Home = (props) => {
   });
 
   return (
+    <div>
+    <Jumbotron />
     <Container>
       <CardGroup>
         <Card>
-          <CardImg top width="100%" src="./assets/test1.jpeg" alt="Card image cap" />
           <CardBody>
             <CardTitle tag="h5">Mission Statement</CardTitle>
             <CardText>Commerce City Youth Athletics believes that our programs help teach children about the importance of commitment, discipline, and teamwork. These skills will be beneficial to our participants throughout their adult lives. We believe our programs motivate our youths physically, to support good health, mentally, to enable them to think for themselves, and civically, to develop pride in our community and to represent our community in a positive manner. It also allows Commerce City residents to view competitive youth sports for free.</CardText>
           </CardBody>
+          <CardImg top width="100%" src={ Logo } alt="Card image cap" />
         </Card>
         <Card>
           <CardImg top width="100%" src="" alt="Card image cap" />
@@ -110,6 +115,7 @@ const Home = (props) => {
         <CarouselControl direction="next" directionText="Next" onClickHandler={next} />
       </Carousel>
     </Container>
+    </div>
   );
 };
 

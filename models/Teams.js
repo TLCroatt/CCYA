@@ -45,6 +45,10 @@ const teamsSchema = new Schema({
       type: String,
       unique: false
     },
+    phone: {
+      type: String,
+      unique: false
+    }
   }]
 });
 
