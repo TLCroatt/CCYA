@@ -61,7 +61,7 @@ const usersSchema = new Schema({
   }],
 });
 
-userSchema.virtual('balance').get(function() {
+usersSchema.virtual('balance').get(function() {
   if(this.participants === undefined || this.participants.length === 0)
     {return 0;}
   else{

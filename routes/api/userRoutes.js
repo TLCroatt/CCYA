@@ -4,9 +4,7 @@ const passport = require('../../config/passport');
 const db = require('../../models');
 const authMiddleware = require('../../config/middleware/authMiddleware');
 
-router.post(
-  '/login',
-  passport.authenticate('local', {
+router.post('/login',passport.authenticate('local', {
     failureRedirect: '/api/users/unauthorized',
     failureFlash: true,
   }),
@@ -20,6 +18,7 @@ router.post(
 );
 
 router.post('/signup', (req, res, next) => {
+  console.log("userRoute Post signup");
   db.User.findOne({ username: req.body.username }, (err, user) => {
     if (err) throw err;
     if (user) {

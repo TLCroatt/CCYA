@@ -20,8 +20,9 @@ const Signup = () => {
     const [errorMessage, setErrorMessage] = useState({});
   
     useEffect(() => {
+      console.log("Signupform UseEffect")
       console.log(errorMessage);
-    }, []);
+    });
   
     const handleConfirmPassword = (event) => {
       const { value } = event.target;

@@ -1,5 +1,6 @@
 import axios from 'axios';
 
+// eslint-disable-next-line 
 export default {
   // logs in user
   login: function (loginInfo) {
@@ -7,7 +8,9 @@ export default {
   },
 
   signup: function (signupInfo) {
-    return axios.post('/api/users/signup', signupInfo);
+    console.log("Eneterd utils/API signup function");
+    console.log(signupInfo);
+    return axios.post("/api/users/signup", signupInfo);
   },
 
   isLoggedIn: function () {
