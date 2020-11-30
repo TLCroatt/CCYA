@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 const router = require('express').Router();
 const passport = require('../../config/passport');
 const db = require('../../models');
