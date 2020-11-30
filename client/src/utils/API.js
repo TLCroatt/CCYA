@@ -8,8 +8,6 @@ export default {
   },
 
   signup: function (signupInfo) {
-    console.log("Eneterd utils/API signup function");
-    console.log(signupInfo);
     return axios.post("/api/users/signup", signupInfo);
   },
 
