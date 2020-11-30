@@ -1,7 +1,8 @@
 import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
-import ContactCard from '../components/ContactCard'
+import ContactCard from '../components/ContactCard';
 import Footer from '../components/Footer/Footer';
+import '../App.css';
 
 const Contact = () => {
 
@@ -10,7 +11,7 @@ const Contact = () => {
             <Container>
                 <ContactCard />
             </Container>
-            <Footer />
+            <Footer/>
         </div>
     )
 }

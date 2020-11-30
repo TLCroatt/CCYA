@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
-import Footer from '../components/Footer/Footer'
+import Footer from '../components/Footer/Footer';
+import '../App.css';
 
 
 
@@ -23,7 +24,7 @@ export const Teams = (props) => {
       <Row>
         <Col>.col</Col>
       </Row>
-
+      
     </Container>
     <Footer />
     </div>

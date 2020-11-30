@@ -3,31 +3,27 @@ import { Card, Button, CardImg, CardTitle, CardText, CardGroup, CardBody, Contai
 import Logo from '../assets/SBLogo.jpg';
 import SB6 from '../assets/SB6.JPG';
 import Jumbotron from '../components/Jumbotron/Jumbotron';
-import Footer from '../components/Footer/Footer'
+import Footer from '../components/Footer/Footer';
+import '../App.css';
 
 const items = [
   {
     src: './images/SB1.JPG',
     altText: 'Slide 1',
-    caption: 'Slide 1',
-    header: "",
     key: '1',
   },
   {
-    src: './images/SB2.JPG',
+    src: './images/SB14.JPG',
     altText: 'Slide 2',
-    caption: 'Slide 2',
-    header: "",
     key: '2',
   },
   {
     src: './images/SB3.JPG',
     altText: 'Slide 3',
-    caption: 'Slide 3',
-    header: "",
     key: '3',
   }
 ];
+
 
 const Home = () => {
 
@@ -53,9 +49,9 @@ const Home = () => {
         </Card>
       </CardGroup>
 
-      <Row>
+      <Row id="about">
         <Col>
-          <h1>About Us</h1>
+          <h1 id="about-header">About Us</h1>
           Commerce City Youth Athletics is a non-profit organization. We as a league are committed to honesty, integrity and a commitment to provide low cost registration fees so that as many as possible youth children may join the sport we provide. We offer a girls’ traveling softball team. We are able to provide the program through registration fees, fundraisers, and donations. All officers and coaches are non-paid volunteers.
           <br />
           <br />
@@ -70,7 +66,7 @@ const Home = () => {
           <br />
           You can mail these donations to:
           <br />
-
+          <br />
           Commerce City Youth Athletics
           C/O Chuck Ingram
           6820 East 77th Avenue
@@ -78,11 +74,12 @@ const Home = () => {
         </Col>
       </Row>
       </Container>
-      <Row>
+      <Row className="carousel mx-auto">
+        <Col md="2"></Col>
         <Col md="8" className="mx-auto">
-          <UncontrolledCarousel className="carousel" items={items} />
+          <UncontrolledCarousel className="carousel" controls={false} indicators={false} items={items} />
         </Col>
-      </Row>  
+      </Row> 
       <Footer />
     </div>
   );
