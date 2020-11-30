@@ -10,8 +10,8 @@ import Navbar from "./components/Nav/Nav";
 import Calendar from "./components/Calendar";
 import Contact from "./pages/Contact";
 import './App.css';
-import UserContext from "../src/utils/UserContext";
-import API from "../src/utils/API"
+import UserContext from "./utils/UserContext";
+import API from "./utils/API"
 
 const App = () => {
   const [userData, setUserData] = useState({
@@ -27,7 +27,7 @@ const App = () => {
 
   useEffect(() => {
     isLoggedIn();
-  }, []);
+  });
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
@@ -48,7 +48,7 @@ const App = () => {
             setUser(user.data.user);
 
             console.log('log in successful');
-            window.location.href = '/profile';
+            window.location.href = '/members';
           } else {
             console.log('Something went wrong :(');
             alert('Login failed, Please try again.');
@@ -72,8 +72,11 @@ const App = () => {
       };
 
       if (userData.username && userData.password) {
+        console.log("before API.signup");
+        console.log(data);
         API.signup(data)
           .then((user) => {
+            console.log(".then of API.signup");
             if (user.data === 'email is already in use') {
               alert('Email already in use.');
             }
@@ -82,7 +85,7 @@ const App = () => {
                 setLoggedin(true);
                 setUser(user.data.user);
                 console.log('log in successful');
-                window.location.href = '/profile';
+                window.location.href = '/members';
               } else {
                 console.log('something went wrong :(');
                 console.log(user.data);

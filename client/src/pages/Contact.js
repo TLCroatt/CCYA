@@ -1,6 +1,7 @@
 import React from 'react';
-import { Container, Row, Col } from 'reactstrap';
-import ContactCard from '../components/ContactCard';
+import { Container } from 'reactstrap';
+import ContactCard from '../components/ContactCard'
+
 import Footer from '../components/Footer/Footer';
 import '../App.css';
 

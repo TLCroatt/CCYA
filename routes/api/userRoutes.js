@@ -1,12 +1,9 @@
-/* eslint-disable no-unused-vars */
 const router = require('express').Router();
 const passport = require('../../config/passport');
 const db = require('../../models');
 const authMiddleware = require('../../config/middleware/authMiddleware');
 
-router.post(
-  '/login',
-  passport.authenticate('local', {
+router.post('/login',passport.authenticate('local', {
     failureRedirect: '/api/users/unauthorized',
     failureFlash: true,
   }),
