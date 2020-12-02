@@ -18,4 +18,8 @@ export default {
   logout: function () {
     return axios.get('/api/users/logout');
   },
+
+  sendMail: function (data) {
+    return axios.post('/api/mail/send', data);
+  }
 };
