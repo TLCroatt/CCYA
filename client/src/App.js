@@ -25,9 +25,11 @@ const App = () => {
   const [user, setUser] = useState(null);
   const [failureMessage, setFailureMessage] = useState(null);
 
-  useEffect(() => {
+    useEffect(() => {
     isLoggedIn();
-  });
+    console.log("useEffect");
+    // eslint-disable-next-line
+  }, []);
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;

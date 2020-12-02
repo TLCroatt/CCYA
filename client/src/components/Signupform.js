@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from 'react';
+import React, { useContext, useState } from 'react';
 import { Button, Form, FormGroup, Label, Input, FormText, Alert } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import UserContext from '../utils/UserContext';
@@ -19,10 +19,7 @@ const Signup = () => {
     const [confirmPassword, setConfirmPassword] = useState('');
     const [errorMessage, setErrorMessage] = useState({});
   
-    useEffect(() => {
-      console.log("Signupform UseEffect")
-      console.log(errorMessage);
-    });
+
   
     const handleConfirmPassword = (event) => {
       const { value } = event.target;
