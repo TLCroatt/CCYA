@@ -9,6 +9,7 @@ router.post('/login',passport.authenticate('local', {
   }),
   (req, res, next) => {
     console.log('sign in successful');
+    console.log(req.user);
     res.json({
       user: req.user,
       loggedIn: true,
