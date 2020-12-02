@@ -33,9 +33,6 @@ export const Navigation = (props) => {
             <NavItem>
               <NavLink tag={Link} to="/contact" id="nav-text">Contact</NavLink>
             </NavItem> 
-            <NavItem>
-              <NavLink tag={Link} to="/calendar" id="nav-text">Calendar</NavLink>
-            </NavItem> 
           </Nav>
           <Nav>
           <UncontrolledDropdown nav inNavbar>
@@ -46,7 +43,7 @@ export const Navigation = (props) => {
                 <DropdownItem tag={Link} to="/login">
                  Login 
                 </DropdownItem>
-                <DropdownItem>
+                <DropdownItem tag={Link} to="/signup">
                   Sign Up
                 </DropdownItem>
               </DropdownMenu>

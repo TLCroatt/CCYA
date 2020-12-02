@@ -1,5 +1,8 @@
 body {
     box-sizing: border-box;
+    margin-bottom: 20px;
+    background: rgb(6,136,24);
+    background: radial-gradient(circle, rgba(6,136,24,1) 0%, rgba(255,255,0,1) 100%);
 }
 
 .container {
@@ -7,6 +10,18 @@ body {
 }
 
 .carousel {
-    align-content: center;
+    padding: 20px;
+    max-width: 65%;
+    max-height: 65%;
+    margin-bottom: 30px;
 }
+
+#about-header {
+    color: yellow;
+}
+
+#about {
+    font-weight: 700;
+}
+
 

@@ -1,28 +1,43 @@
-import React from 'react';
-import { Container, Row, Col } from 'reactstrap';
+import React, { useContext } from 'react';
+import { Container, Card, CardTitle, CardText, CardGroup, CardBody, } from 'reactstrap';
+import Schedule from '../components/Calendar';
+import Footer from '../components/Footer/Footer';
+import UserContext from '../utils/UserContext';
+
+
 
 
 
 export const Members = (props) => {
+  const {
+    user
+  } =useContext(UserContext);
+  console.log(user);
   return (
+    <div>
     <Container>
-      <div>
-        <h2>Home Page</h2>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-
-      </div>
-      <Row>
-        <Col>.col</Col>
-      </Row>
-      <Row>
-        <Col>.col</Col>
-        <Col>.col</Col>
-      </Row>
-      <Row>
-        <Col>.col</Col>
-      </Row>
-
+      <CardGroup>
+        <Card>
+          <CardBody>
+            <CardTitle tag="h5">Enrolled Athletes</CardTitle>
+            <CardText>
+              <p>Kid A</p>
+              <p>Kid B</p>
+            </CardText>
+          </CardBody>
+        </Card>
+        <Card>
+          <CardBody>
+            <CardTitle tag="h5">Schedule</CardTitle>
+            <Schedule />
+          </CardBody>
+        </Card>
+      </CardGroup>
+     
+  
     </Container>
+    <Footer />
+    </div>
   );
 }
 
