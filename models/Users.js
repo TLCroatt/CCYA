@@ -45,11 +45,11 @@ const usersSchema = new Schema({
       unique: false,
     },
     childDoB: {
-      type: Date,
+      type: String,
     },
     address: {
-
-    }, 
+      type: String
+    },
     teams: [{
       TeamName: {
         type: String

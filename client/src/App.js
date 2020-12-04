@@ -12,6 +12,7 @@ import Contact from "./pages/Contact";
 import './App.css';
 import UserContext from "./utils/UserContext";
 import API from "./utils/API"
+import { dateFnsLocalizer } from 'react-big-calendar';
 
 const App = () => {
   const [userData, setUserData] = useState({
@@ -21,19 +22,28 @@ const App = () => {
     username: '',
     password: '',
   });
+  const [childData, setChildData] = useState({
+    name: "",
+    childDoB: "",
+    address: "",
+  })
   const [loggedIn, setLoggedin] = useState(false);
   const [user, setUser] = useState(null);
   const [failureMessage, setFailureMessage] = useState(null);
 
-    useEffect(() => {
-    isLoggedIn();
-    console.log("useEffect");
-    // eslint-disable-next-line
+  useEffect(() => {
+  isLoggedIn();
+  // eslint-disable-next-line
   }, []);
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
     setUserData({ ...userData, [name]: value });
+  };
+
+  const handleChildInputChange = (event) => {
+    const { name, value } = event.target;
+    setChildData({ ...childData, [name]: value });
   };
 
   const handleLogin = (event) => {
@@ -46,9 +56,9 @@ const App = () => {
       API.login(data)
         .then((user) => {
           if (user.data.loggedIn) {
+            console.log("handleLog user", user);
             setLoggedin(true);
             setUser(user.data.user);
-
             console.log('log in successful');
             window.location.href = '/members';
           } else {
@@ -74,11 +84,8 @@ const App = () => {
       };
 
       if (userData.username && userData.password) {
-        console.log("before API.signup");
-        console.log(data);
         API.signup(data)
           .then((user) => {
-            console.log(".then of API.signup");
             if (user.data === 'email is already in use') {
               alert('Email already in use.');
             }
@@ -103,6 +110,46 @@ const App = () => {
       console.log('App -> error', error);
     }
   };
+
+  const handleAddChild = (event) => {
+    event.preventDefault();
+    try {
+      const data = {
+        childName: childData.childName,
+        address: childData.address,
+        childDoB: childData.childDoB,
+      };
+
+      console.log("handle data", data);
+    
+      if (childData.childName) {
+        API.addChild(data)
+          .then((user) => {
+            if (user.data.loggedIn) {
+              if (user.data.loggedIn) {
+                setLoggedin(true);
+                setUser(user.data.user);
+                window.location.href = '/members';
+              } else {
+                console.log('something went wrong :(');
+                console.log(user.data);
+                setFailureMessage(user.data);
+              }
+            }
+          })
+          .catch((error) => {
+            console.log(error);
+          });
+      }
+    } catch (error) {
+      console.log('App -> error', error);
+    }
+
+  }
+
+  const handleRemoveChild = (event) => {
+    console.log("entered handleRemoveChild");
+  }
 
   const isLoggedIn = () => {
     if (!loggedIn) {
@@ -132,9 +179,13 @@ const App = () => {
     loggedIn,
     user,
     failureMessage,
+    childData,
     handleInputChange,
     handleLogin,
     handleSignup,
+    handleAddChild,
+    handleRemoveChild,
+    handleChildInputChange,
     logout,
   };
 

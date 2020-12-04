@@ -10,6 +10,10 @@ export default {
   signup: function (signupInfo) {
     return axios.post("/api/users/signup", signupInfo);
   },
+  
+  addChild: function (childData) {
+    return axios.post("api/users/addChild", childData);
+  },
 
   isLoggedIn: function () {
     return axios.get('/api/users/profile');
