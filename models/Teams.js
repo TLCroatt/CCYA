@@ -16,11 +16,11 @@ const teamsSchema = new Schema({
   cost:{
     type: Number,
     unique: false,
-    required: true
+    required: false,
   },
   schedule: [{
     date: {
-      type: Date,
+      type: String,
       required: false,
     },
     game: {
@@ -38,7 +38,7 @@ const teamsSchema = new Schema({
       unique: false,
     },
     dob: {
-      type: Date,
+      type: String,
       unique: false,
     },
     address: {
