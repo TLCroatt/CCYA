@@ -2,11 +2,11 @@ import moment from "moment";
 
 
 export default [
-    {
-      start: new Date(),
-      end: new Date().setDate(new Date().getDate() + 1),
-      title: "Some title"
-    },
+    // {
+    //   start: new Date(),
+    //   end: new Date().setDate(new Date().getDate() + 1),
+    //   title: "Some title"
+    // },
     {
       start: new Date(),
       end: moment()
@@ -23,7 +23,7 @@ export default [
     {
         start: new Date(2020, 10, 30, 13, 0),
         end: new Date(2020, 10, 30, 14, 0),
-        title: "Eagles",
+        title: "Lady Eagles Game",
         // desc: 'Pre-meeting meeting, to prepare for the meeting',
       },
       {
