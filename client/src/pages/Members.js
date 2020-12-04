@@ -1,6 +1,8 @@
 import React, { useContext } from 'react';
-import { Container, Card, CardTitle, CardText, CardGroup, CardBody, } from 'reactstrap';
+import { Link } from "react-router-dom";
+import { Container, Card, CardTitle, CardGroup, CardBody, } from 'reactstrap';
 import Schedule from '../components/Calendar';
+import Profile from '../components/Profile'
 import Footer from '../components/Footer/Footer';
 import UserContext from '../utils/UserContext';
 
@@ -8,35 +10,36 @@ import UserContext from '../utils/UserContext';
 
 
 
-export const Members = (props) => {
-  const {
-    user
-  } =useContext(UserContext);
-  console.log(user);
+
+export const Members = () => {
+  const { user, loggedIn } = useContext(UserContext);
   return (
     <div>
-    <Container>
-      <CardGroup>
-        <Card>
-          <CardBody>
-            <CardTitle tag="h5">Enrolled Athletes</CardTitle>
-            <CardText>
-              <p>Kid A</p>
-              <p>Kid B</p>
-            </CardText>
-          </CardBody>
-        </Card>
-        <Card>
-          <CardBody>
-            <CardTitle tag="h5">Schedule</CardTitle>
-            <Schedule />
-          </CardBody>
-        </Card>
-      </CardGroup>
-     
-  
-    </Container>
-    <Footer />
+    {loggedIn ? (
+      <div>
+        <Container>
+          <CardGroup>
+            <Card>
+              <CardBody>
+                <CardTitle tag="h3">Welcome {user && user.firstname} {user && user.lastname} </CardTitle>
+                <Profile />
+              </CardBody>
+            </Card>
+            <Card>
+              <CardBody>
+                <CardTitle tag="h3">Schedule</CardTitle>
+                <Schedule />
+              </CardBody>
+            </Card>
+          </CardGroup>
+        </Container>
+        <Footer />
+      </div>
+      ) : (
+      <div>
+        <Link to="/login"><h2>Login to view this page</h2></Link>
+      </div>
+    )}
     </div>
   );
 }

@@ -50,6 +50,23 @@ router.post('/signup', (req, res, next) => {
   });
 });
 
+router.post('/addchild', authMiddleware.isLoggedIn, (req, res, next) => {
+  db.User.update(
+    {_id: req.user._id},
+    {$push: {participants: {
+      childName: req.body.childName,
+      childDoB: req.body.childDoB,
+      address: req.body.address
+    }}},
+    (error2) =>{
+      if (error2) throw error2;
+      console.log("Response fro api", res);
+      console.log('participant saved!');
+      res.redirect(307, '/api/users/login');
+    }
+  )
+})
+
 router.get('/unauthorized', (req, res, next) => {
   res.json({
     error: req.flash('error'),

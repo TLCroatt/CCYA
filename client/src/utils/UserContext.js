@@ -2,6 +2,7 @@ import React from 'react';
 
 const UserContext = React.createContext({
   userData: {},
+  childData: {},
   loggedIn: false,
   user: {},
   failureMessage: "",
@@ -10,6 +11,9 @@ const UserContext = React.createContext({
   handleSignup: () => {},
   logout: () => {},
   handleRegister: () => {},
+  handleAddChild: () => {},
+  handleRemoveChild: () => {},
+  handleChildInputChange: () => {}
 });
 
 export default UserContext;
