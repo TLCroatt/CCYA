@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Calendar, momentLocalizer } from "react-big-calendar";
 import moment from "moment";
+import eventArray from "./events";
 
 import "react-big-calendar/lib/css/react-big-calendar.css";
 
@@ -8,15 +9,7 @@ const localizer = momentLocalizer(moment);
 
 class Schedule extends Component {
   state = {
-    events: [
-      {
-        start: moment().toDate(),
-        end: moment()
-          .add(1, "days")
-          .toDate(),
-        title: "Some title"
-      }
-    ]
+    events: eventArray
   };
 
   render() {

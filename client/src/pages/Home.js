@@ -2,6 +2,7 @@ import React from 'react';
 import { Card, Button, CardImg, CardTitle, CardText, CardGroup, CardBody, Container, Row, Col, UncontrolledCarousel } from 'reactstrap';
 import Logo from '../assets/SBLogo.jpg';
 import SB6 from '../assets/SB6.JPG';
+import sponsors from '../assets/sponsors.png';
 import Jumbotron from '../components/Jumbotron/Jumbotron';
 import Footer from '../components/Footer/Footer';
 import '../App.css';
@@ -43,8 +44,10 @@ const Home = () => {
           <CardImg top width="100%" src={ SB6 } alt="Card image cap" />
           <CardBody>
             <CardTitle tag="h5">Sponsors</CardTitle>
-            <CardText>We could insert one image with all of the sponsor's logos compiled into</CardText>
-            <Button>Button</Button>
+            <CardText>We could insert one image with all of the sponsor's logos compiled into
+            <CardImg top width="30%" src={ sponsors } alt="Card image cap" />
+            </CardText>
+        
           </CardBody>
         </Card>
       </CardGroup>
