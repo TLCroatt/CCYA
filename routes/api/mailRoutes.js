@@ -2,19 +2,26 @@ const router = require('express').Router();
 const passport = require('../../config/passport');
 const authMiddleware = require('../../config/middleware/authMiddleware');
 const nodemailer = require('nodemailer');
+const smtpTransport = require('nodemailer-smtp-transport')
+const creds = require('../../config/config')
 const cors = require('cors');
+const { response } = require('express');
 
 
-const transport = nodemailer.createTransport({
-    host: "smtp.mailtrap.io",
+const transport = nodemailer.createTransport(smtpTransport({
+    service: 'gmail',
+    host: "smtp.gmail.com",
     port: 587,
+    secure: false,
     auth: {
-      user: "955abe59f5ad61",
-      pass: "072d3363eaad77"
-    }
-  });
+      user: creds.USER,
+      pass: creds.PASS
+    },
+    ignoreTLS: true
+  }));
 
 const transporter = nodemailer.createTransport(transport)
+console.log(transporter.options.host)
 
 transporter.verify((error, success) => {
     if (error) {
@@ -32,7 +39,7 @@ router.post('/send', (req, res, next) => {
 
     const mail = {
         from: name,
-        to: '2103b98ead-8b020d@inbox.mailtrap.io',
+        to: 'testcodeacct8476@gmail.com',
         subject: 'New Message from Contact Form',
         text: content
     }
