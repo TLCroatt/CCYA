@@ -28,45 +28,65 @@
 
 ---
 
-## Description
+# Description
 
   CCYA is a non-profit sports league headed by Brian Ingram and his family that offers low-cost programs to kids in the Commerce City area. We wanted to create an eye-catching, interactive site for the members. 
 
-### Technologies
+# Technologies
 
-- Reactjs
-- Reacstrap
-- Javascript
-- JSON
-- Express
-- Nodejs
-- Passport
-- MongoDB
-- Mongoose
-- HTML
-- CSS
-- Bootstrap
+- ### React
+- ### Reactstrap
+- ### React Calendar
+- ### Form Spree
+- ### Moment JS
+- ### Axios
+- ### bcrypt
+- ### Concurrently
+- ### Express
+- ### Express Sessions
+- ### MongoDB
+- ### Memory Store
+- ### Passport
+- ### Path
 
-## How to Use
 
-Click the Start button, the quiz and timer will run as the questions are rendered to the screen, select your answers and your score is printed at the the very end or when the time runs out.
+## Installation
+
+```
+npm i -- on front end server and backend server
+npm start -- start the development server on your localhost://
+```
 
 ### License
 
 Distributed under the MIT License. See LICENSE for more information.
+
+![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
 
 [Back To The Top](#ccya)
 
 ---
 
 ## Author Info
+Trisha Croatt
+[![GitHub license](https://img.shields.io/badge/%40TLCroatt-green)](https://github.com/TLCroatt)
 
-Brian Ingram\
-Trisha Croatt\
-Tyler Mathews\
-Grant Pardington\
+Brian Ingram
+[![GitHub license](https://img.shields.io/badge/%40ingrambc-yellow)](https://github.com/ingrambc)
+
 Fatim Robbins
+[![GitHub license](https://img.shields.io/badge/%40Melodie15-purple)](https://github.com/Melodie15)
 
-**Heroku link -** 
+Grant Pardington
+[![GitHub license](https://img.shields.io/badge/%40gpardington-red)](https://github.com/gpardington)
 
-<img src="./client/src/assets/projectscreenshot.png" alt="project image">
+Tyler Mathews
+[![GitHub license](https://img.shields.io/badge/%40mrmathews08-orange)](https://github.com/mrmathews08)
+
+## Heroku link - 
+
+
+
+<img width="1403" alt="Screen Shot 2020-12-05 at 11 21 28 AM" src="https://user-images.githubusercontent.com/65747246/101260306-32f48700-36ec-11eb-9aaf-906952b4e677.png">
+
+
