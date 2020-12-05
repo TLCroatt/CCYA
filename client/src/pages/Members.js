@@ -16,13 +16,13 @@ export const Members = () => {
         <Container>
           <CardGroup>
             <Card>
-              <CardBody>
+              <CardBody className="members">
                 <CardTitle tag="h3">Welcome {user && user.firstname} {user && user.lastname} </CardTitle>
                 <Profile />
               </CardBody>
             </Card>
             <Card>
-              <CardBody>
+              <CardBody className="schedule">
                 <CardTitle tag="h3">Schedule</CardTitle>
                 <Schedule />
               </CardBody>
