@@ -3,24 +3,37 @@
     text-shadow: black 0.2em 0.2em 0.2em; 
 }
 
-h1 {
+.display-2 {
     color: green;
-    text-shadow:  black 2px 2px;
+    text-shadow: black 1px 1px 1px;
+    font-family: 'Playball', cursive;
+    font-weight: bolder;
+    font-size: 130px ;
 }
 
 .lead {
+    font-family: 'PT Sans Narrow',
+    sans-serif;
     color: yellow;
-    text-shadow: black 2px 2px;
-    font-size: 35px;
+    text-shadow: black 1px 1px 1px;
+    font-size: 40px;
     margin-top: 30px;
 }
 
 .quote {
-    font-size: 20px;;
+    font-size: 25px;
+    font-family: 'PT Sans Narrow',
+    sans-serif;
+    color: white;
+    text-shadow: black 1px 1px 1px;
 }
 
 #register-btn{
     color: yellow;
+    font-family: 'PT Sans Narrow',
+    sans-serif;
+    background-color: green;
+    font-size: 25px;
 }
 
 .hero-image {

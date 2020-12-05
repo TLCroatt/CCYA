@@ -34,10 +34,12 @@ const Home = () => {
     <Container>
       <Row className="cards">
       <CardGroup>
+
         <Card className="card">
           <CardBody className="card-body">
             <CardTitle className="card-title" tag="h5">Mission Statement</CardTitle>
-            <CardText className="card-text">Commerce City Youth Athletics believes that our programs help teach children about the importance of commitment, discipline, and teamwork. These skills will be beneficial to our participants throughout their adult lives. We believe our programs motivate our youths physically, to support good health, mentally, to enable them to think for themselves, and civically, to develop pride in our community and to represent our community in a positive manner. It also allows Commerce City residents to view competitive youth sports for free.</CardText>
+            <CardText className="card-text" id="cardText">Commerce City Youth Athletics believes that our programs help teach children about the importance of commitment, discipline, and teamwork. These skills will be beneficial to our participants throughout their adult lives. We believe our programs motivate our youths physically, to support good health, mentally, to enable them to think for themselves, and civically, to develop pride in our community and to represent our community in a positive manner. It also allows Commerce City residents to view competitive youth sports for free.</CardText>
+
           </CardBody>
           <CardImg className="card-img" top width="100%" src={ Logo } alt="CCYA Lady Eagles Logo" />
         </Card>
@@ -45,8 +47,10 @@ const Home = () => {
         <Card className="card">
           <CardImg className="card-img" top width="100%" src={ SB6 } alt="athlete tagging opposing athlete out as she approaches base" />
           <CardBody>
+
             <CardTitle className="card-title" tag="h5">Sponsors</CardTitle>
-            <CardText className="card-text">We are grateful for the generosity of our partners! Thank you to our amazing sponsors.
+            <CardText className="card-text" id="cardText">We are grateful for the generosity of our partners! Thank you to our amazing sponsors.
+
             </CardText>
             <CardImg className="card-img" height="50%" width="100%" src={ sponsors3 } alt="Card image cap" />
           </CardBody>

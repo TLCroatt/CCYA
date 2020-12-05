@@ -3,6 +3,9 @@
     text-align: center;
     padding: 10px;
     position: static;
+    font-family: 'PT Sans Narrow',
+    sans-serif;
+    font-size: 20px;
 }
 
 #address {

@@ -36,7 +36,7 @@ const Signup = () => {
         setValidFirstName(false);
         setErrorMessage({
           ...errorMessage,
-          firstname: 'First Name should be at least 3 characters.',
+          firstname: 'First name should be at least 3 characters.',
         });
       } else {
         setValidFirstName(true);
@@ -54,7 +54,7 @@ const Signup = () => {
         setValidLastName(false);
         setErrorMessage({
           ...errorMessage,
-          lastname: 'First Name should be at least 3 characters.',
+          lastname: 'Last name should be at least 3 characters.',
         });
       } else {
         setValidLastName(true);
@@ -116,7 +116,7 @@ const Signup = () => {
         setValidPassword(false);
         setErrorMessage({
           ...errorMessage,
-          password: 'Password should be at least 8 letters, 1 capital & 1 number',
+          password: 'Password should be at least 8 letters, 1 capital letter & 1 number',
         });
       } else {
         setValidPassword(true);
@@ -146,7 +146,7 @@ const Signup = () => {
   
     return (
       <div>
-        <h2 className="loginTitle">Signup</h2>
+        <h2 className="loginTitle">Sign Up</h2>
         <hr />
         {failureMessage ? <Alert type="danger">{failureMessage}</Alert> : <p></p>}
         <Form>
@@ -156,7 +156,7 @@ const Signup = () => {
               type="text"
               name="firstname"
               id="firstname"
-              placeholder="firstname"
+              placeholder="first name"
               value={userData.firstname}
               onChange={handleInputChange}
               onBlur={checkFirstname}
@@ -170,7 +170,7 @@ const Signup = () => {
               type="text"
               name="lastname"
               id="lastname"
-              placeholder="lastname"
+              placeholder="last name"
               value={userData.lastname}
               onChange={handleInputChange}
               onBlur={checkLastname}
@@ -250,7 +250,7 @@ const Signup = () => {
             </Button>
           )}
           <p className="signupLink">
-            <Link to="/login">already have an account? Sign in here</Link>
+            <Link to="/login">Already have an account? Sign in here</Link>
           </p>
         </Form>
       </div>
