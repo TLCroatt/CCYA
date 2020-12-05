@@ -65,8 +65,8 @@ class Contact extends React.Component {
     xhr.onreadystatechange = () => {
       if (xhr.readyState !== XMLHttpRequest.DONE) return;
       if (xhr.status === 200) {
-        form.reset();
         this.setState({ status: "SUCCESS" });
+        this.setState({name: '', email: '', message: ''})
       } else {
         this.setState({ status: "ERROR" });
       }
@@ -74,9 +74,6 @@ class Contact extends React.Component {
     xhr.send(data);
   }
 
-  resetForm(){
-      this.setState({name: '', email: '', message: ''})
-  }
 }
 
 export default Contact;
