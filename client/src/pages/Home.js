@@ -47,7 +47,6 @@ const Home = () => {
             <CardText>We are grateful for the generosity of our partners! Thank you to our amazing sponsors.
             <CardImg top width="100%" src={ sponsors2 } alt="Card image cap" />
             </CardText>
-        
           </CardBody>
         </Card>
       </CardGroup>

@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import UserContext from '../../utils/UserContext';
 import { Link } from "react-router-dom";
 import {
   Collapse,
@@ -16,6 +17,7 @@ import {
 import './style.css';
 
 export const Navigation = (props) => {
+  const {loggedIn, logout} = useContext(UserContext);
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
@@ -28,7 +30,7 @@ export const Navigation = (props) => {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
             <NavItem>
-              <NavLink tag={Link} to="/teams" id="nav-text">Teams</NavLink>
+              <NavLink tag={Link} to={loggedIn ? "/members" : "/login"} id="nav-text">Members</NavLink>
             </NavItem>
             <NavItem>
               <NavLink tag={Link} to="/contact" id="nav-text">Contact</NavLink>
@@ -41,7 +43,12 @@ export const Navigation = (props) => {
               </DropdownToggle>
               <DropdownMenu right>
                 <DropdownItem tag={Link} to="/login">
-                 Login 
+                  Log In 
+                </DropdownItem>
+                <DropdownItem> 
+                  <Link to = "/home">
+                  <span onClick={logout}>Log Out</span>
+                  </Link>
                 </DropdownItem>
                 <DropdownItem tag={Link} to="/signup">
                   Sign Up
