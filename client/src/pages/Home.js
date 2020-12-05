@@ -36,7 +36,7 @@ const Home = () => {
         <Card>
           <CardBody>
             <CardTitle tag="h5">Mission Statement</CardTitle>
-            <CardText>Commerce City Youth Athletics believes that our programs help teach children about the importance of commitment, discipline, and teamwork. These skills will be beneficial to our participants throughout their adult lives. We believe our programs motivate our youths physically, to support good health, mentally, to enable them to think for themselves, and civically, to develop pride in our community and to represent our community in a positive manner. It also allows Commerce City residents to view competitive youth sports for free.</CardText>
+            <CardText id="cardText">Commerce City Youth Athletics believes that our programs help teach children about the importance of commitment, discipline, and teamwork. These skills will be beneficial to our participants throughout their adult lives. We believe our programs motivate our youths physically, to support good health, mentally, to enable them to think for themselves, and civically, to develop pride in our community and to represent our community in a positive manner. It also allows Commerce City residents to view competitive youth sports for free.</CardText>
           </CardBody>
           <CardImg top width="100%" src={ Logo } alt="Card image cap" />
         </Card>
@@ -45,7 +45,7 @@ const Home = () => {
           <CardImg top width="100%" src={ SB6 } alt="Card image cap" />
           <CardBody>
             <CardTitle tag="h5">Sponsors</CardTitle>
-            <CardText>We are grateful for the generosity of our partners! Thank you to our amazing sponsors.
+            <CardText id="cardText">We are grateful for the generosity of our partners! Thank you to our amazing sponsors.
             <CardImg top width="100%" src={ sponsors2 } alt="Card image cap" />
             </CardText>
           </CardBody>

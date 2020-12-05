@@ -7,10 +7,6 @@ import Footer from '../components/Footer/Footer';
 import UserContext from '../utils/UserContext';
 
 
-
-
-
-
 export const Members = () => {
   const { user, loggedIn } = useContext(UserContext);
   return (
@@ -37,7 +33,7 @@ export const Members = () => {
       </div>
       ) : (
       <div>
-        <Link to="/login"><h2>Login to view this page</h2></Link>
+        <Link to="/login"><h2>Log in to view this page</h2></Link>
       </div>
     )}
     </div>

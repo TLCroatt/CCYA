@@ -13,7 +13,7 @@ export const Jumbo = () => {
         <hr className="my-2" />
         <p className="quote">"The only player you should try to be better than is the player you were yesterday." - Coach Ingram</p>
         <p className="lead">
-          <Button color="success" size ="lg" id="register-btn" tag={Link} to="/register">Register Here</Button>
+          <Button size ="lg" id="register-btn" tag={Link} to="/register">Register Here</Button>
         </p>
         </div>
       </div>

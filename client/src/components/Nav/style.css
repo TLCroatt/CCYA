@@ -4,15 +4,21 @@
 
 #nav-header{
     color: yellow;
-    font-size: 30px;
+    font-size: 35px;
+    font-family: 'Playball', cursive;
 }
 
  #nav-text{
      color: white;
-     font-size: 25px;;
+     font-size: 25px;
+     font-family: 'PT Sans Narrow',
+     sans-serif;
  }
 
  #nav-options{
     color: yellow;
+    font-family: 'PT Sans Narrow',
+    sans-serif;
+    font-size: 25px;
  }
 

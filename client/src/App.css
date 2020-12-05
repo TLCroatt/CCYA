@@ -10,6 +10,8 @@ body {
     background-size: cover;
     background-attachment: fixed;
     background-position: center bottom;
+    font-family: -apple-system, BlinkMacSystemFont, 'PT Sans Narrow',
+    sans-serif;
 }
 
 .container {
@@ -23,12 +25,37 @@ body {
     margin-bottom: 30px;
 }
 
+h5{
+    font-size: 50px;
+    font-family: 'Playball', cursive;
+    font-weight: bold;
+    color: green;
+    text-decoration: underline;
+    text-shadow: yellow 1px 1px 1px;
+}
+
+#cardText {
+    font-family: 'PT Sans Narrow',
+    sans-serif;
+    font-size: 20px;
+}
+
 #about-header {
+    font-size: 50px;
+    font-family: 'Playball', cursive;
+    font-weight: bold;
     color: yellow;
+    text-decoration: underline;
+    text-shadow:green 2px 2px 2px;
 }
 
 #about {
-    font-weight: 700;
+    font-family: 'PT Sans Narrow',
+    sans-serif;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    text-shadow: black 1px 1px 1px;
 }
 
 
