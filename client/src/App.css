@@ -16,7 +16,38 @@ body {
     max-width: 1200px;
 }
 
+.cards {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.card {
+    border: 0;
+    background-color: transparent;
+}
+
+.card-body{
+    border-radius: 0em;
+    background-color: black;
+}
+
+.card-img {
+    border-radius: 0em;
+}
+
+.card-title {
+    color: yellow;
+    font-size: 30px;
+}
+
+.card-text {
+    color: rgb(211, 207, 207);
+    margin-top: 40px;
+    font-size: 24px;
+}
+
 .carousel {
+    border-radius: 5px;
     padding: 10px;
     max-width: 90%;
     max-height: 90%;
