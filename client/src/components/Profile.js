@@ -8,7 +8,7 @@ export const Profile = () => {
     handleChildInputChange, childData } = useContext(UserContext);
     console.log("Profile user", user);
   return (
-    <CardText>
+    <CardText className="profile">
     {(user && user.participants.length > 0) ? (
       user.participants.map(({childName, childDoB, address}) => {
         return(

@@ -146,7 +146,7 @@ const Signup = () => {
   
     return (
       <div>
-        <h2 className="loginTitle">Signup</h2>
+        <h2 className="loginTitle">Sign Up</h2>
         <hr />
         {failureMessage ? <Alert type="danger">{failureMessage}</Alert> : <p></p>}
         <Form>

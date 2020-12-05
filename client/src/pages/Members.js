@@ -17,13 +17,13 @@ export const Members = () => {
           <CardGroup>
             <Card>
               <CardBody className="members">
-                <CardTitle tag="h3">Welcome {user && user.firstname} {user && user.lastname} </CardTitle>
+                <CardTitle className="member-welcome" tag="h3">Welcome {user && user.firstname} {user && user.lastname} </CardTitle>
                 <Profile />
               </CardBody>
             </Card>
             <Card>
               <CardBody className="schedule">
-                <CardTitle tag="h3">Schedule</CardTitle>
+                <CardTitle className="calendar-title" tag="h3">Schedule</CardTitle>
                 <Schedule />
               </CardBody>
             </Card>
