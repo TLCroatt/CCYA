@@ -4,6 +4,9 @@ import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 
 const Registration = () => {
   return (
+    <div>
+      <h2 className="register-title">Register</h2>
+      <hr />
     <Form>
       <FormGroup>
         <Label for="name">Child's Name</Label>
@@ -27,7 +30,7 @@ const Registration = () => {
       </FormGroup>
       <Button color="success" size="lg">Submit</Button>
     </Form>
-
+    </div>
   );
 }
 

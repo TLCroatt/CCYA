@@ -9,8 +9,7 @@ export const Register = () => {
     <Container className="form-container">
       <div>
       <Card>
-        <CardBody>
-          <CardTitle tag="h2">Register</CardTitle>
+        <CardBody className="register">
           <Registration />
         </CardBody>
       </Card>

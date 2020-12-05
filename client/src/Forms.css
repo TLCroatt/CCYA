@@ -11,10 +11,10 @@
     sans-serif;
 }
 
-.contact-card, .signup-card, .login-card, .members, .schedule {
+.contact-card, .signup-card, .login-card, .members, .schedule, .register {
     background-color: white;
 }
 
-.member-title {
-    
+.register-title {
+    color: black;
 }
