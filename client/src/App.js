@@ -32,9 +32,10 @@ const App = () => {
   const [failureMessage, setFailureMessage] = useState(null);
 
   useEffect(() => {
+    console.log(user);
   isLoggedIn();
   // eslint-disable-next-line
-  }, []);
+  }, [user, setUser]);
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
@@ -60,7 +61,7 @@ const App = () => {
             setLoggedin(true);
             setUser(user.data.user);
             console.log('log in successful');
-            window.location.href = '/members';
+            //window.location.href = '/members';
           } else {
             console.log('Something went wrong :(');
             alert('Login failed, Please try again.');
@@ -125,10 +126,11 @@ const App = () => {
       if (childData.childName) {
         API.addChild(data)
           .then((user) => {
-            if (user.data.loggedIn) {
-              if (user.data.loggedIn) {
+            if (loggedIn) {
+              if (loggedIn) {
                 setLoggedin(true);
                 setUser(user.data.user);
+                console.log(user.data.user);
                 window.location.href = '/members';
               } else {
                 console.log('something went wrong :(');

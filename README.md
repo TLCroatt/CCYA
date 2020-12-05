@@ -5,6 +5,7 @@
 [![GitHub license](https://img.shields.io/badge/%40Melodie15-purple)](https://github.com/Melodie15)
 [![GitHub license](https://img.shields.io/badge/%40gpardington-red)](https://github.com/gpardington)
 [![GitHub license](https://img.shields.io/badge/%40mrmathews08-orange)](https://github.com/mrmathews08)
+
 ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
 
 **COMMERCE CITY YOUTH ATHLETICS**
@@ -22,7 +23,7 @@
 
 - [Description](#description)
 - [Technologies](#technologies)
-- [How To Use](#how-to-use)
+- [Installation](#installation)
 - [License](#license)
 - [Author Info](#author-info)
 
