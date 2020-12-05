@@ -7,8 +7,8 @@ const SignupPage = () => {
     return(
     <Container className="form-container">
         <div>
-        <Card className="signup-card">
-        <CardBody>
+        <Card>
+        <CardBody className="signup-card">
           <Signupform />
         </CardBody>
       </Card>  

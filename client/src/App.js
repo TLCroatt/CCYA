@@ -61,7 +61,7 @@ const App = () => {
             setLoggedin(true);
             setUser(user.data.user);
             console.log('log in successful');
-            //window.location.href = '/members';
+            window.location.href = '/members';
           } else {
             console.log('Something went wrong :(');
             alert('Login failed, Please try again.');

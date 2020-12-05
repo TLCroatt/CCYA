@@ -7,8 +7,8 @@ const LoginPage = () => {
     return(
     <Container className="form-container">
         <div>
-        <Card className="login-card">
-        <CardBody>
+        <Card>
+        <CardBody className="login-card">
           <Login />
         </CardBody>
       </Card>  
