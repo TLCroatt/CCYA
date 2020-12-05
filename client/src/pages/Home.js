@@ -45,12 +45,10 @@ const Home = () => {
         <Card className="card">
           <CardImg className="card-img" top width="100%" src={ SB6 } alt="athlete tagging opposing athlete out as she approaches base" />
           <CardBody>
-
             <CardTitle className="card-title" tag="h5">Sponsors</CardTitle>
             <CardText className="card-text">We are grateful for the generosity of our partners! Thank you to our amazing sponsors.
-            <CardImg top width="100%" src={ sponsors2 } alt="Card image cap" />
-
             </CardText>
+            <CardImg className="card-img" height="50%" width="100%" src={ sponsors3 } alt="Card image cap" />
           </CardBody>
         </Card>
       </CardGroup>
