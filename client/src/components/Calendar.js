@@ -8,19 +8,22 @@ import UserContext from "../utils/UserContext";
 
 const localizer = momentLocalizer(moment);
 
+
 export const Schedule = () => {
   const { calendarEvents, } = useContext(UserContext);
-  // fillEvents();
 
   return (
     <div className="App">
       {(calendarEvents && calendarEvents.length > 0 ? 
         <Calendar
+        selectable
+        popup
         localizer={localizer}
         defaultDate={new Date()}
         defaultView="month"
         events={ calendarEvents }
         style={{ height: "100vh" }}
+        //onSelectEvent={event => eventModal(event)}
       /> :
       <h3>Calendar is loading</h3>
       )}
