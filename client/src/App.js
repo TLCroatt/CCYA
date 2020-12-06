@@ -222,8 +222,8 @@ const App = () => {
           let parts = res.data[i].name.split(" ");
           event.title = parts[2];
           parts = tempSchArray[j].date.split("/");
-          event.start = new Date(parts[2], parts[1] - 1, parts[0]);
-          event.end = new Date(parts[2], parts[1] - 1, parts[0]);
+          event.start = new Date(parts[2], parts[0] - 1, parts[1]);
+          event.end = new Date(parts[2], parts[0] - 1, parts[1]);
           event.resource = {
             team: res.data[i].name,
             location: tempSchArray[j].location,
