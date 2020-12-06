@@ -9,7 +9,6 @@ router.post('/login',passport.authenticate('local', {
   }),
   (req, res, next) => {
     console.log('sign in successful');
-    console.log(req.user);
     res.json({
       user: req.user,
       loggedIn: true,
@@ -60,7 +59,6 @@ router.post('/addchild', authMiddleware.isLoggedIn, (req, res, next) => {
     }}},
     (error2) =>{
       if (error2) throw error2;
-      console.log("Response fro api", res);
       console.log('participant saved!');
       res.redirect(307, '/api/users/login');
     }
@@ -92,11 +90,49 @@ router.get('/admin', authMiddleware.isAdmin, (req, res, next) => {
   });
 });
 
-router.get('/schedule/:teamName', (req, res, next) => {
-  db.Team.find({team: req.params.teamName}, {schedule: schedule}, (err, schedule) => {
-    if(err) throw err;
-    res.send(schedule);
-    })
+router.post('/removeParticipant', authMiddleware.isLoggedIn, (req, res, next) => {
+  db.User.update(
+    {_id: req.user._id},
+    {$pull: { "participants" : { _id: req.body.childID }}},
+    (error2) =>{
+      if (error2) throw error2;
+      console.log('participant removed!');
+      res.redirect(307, '/api/users/login');
+  });
+});
+
+router.get("/fillEvents", (req, res, next) => {
+  // console.log("Entered userRoutes fillEvents");
+  db.Team.find( {}, {name: 1, schedule: 1, _id: 0},
+    (error2, result) =>{
+      if (error2){
+        throw error2;
+      }
+      // console.log("api/users/fillEvents has run");
+      // console.log("userRoute Result", result);
+      res.json(result);
+  });
+  // db.Team.find().toArray((err, result) =>{
+  //   if(err) throw err;
+  //   res.json(result);
+  // })
+});
+
+router.post('/register', authMiddleware.isLoggedIn, (req, res, next) => {
+  db.Team.update(
+    {name: req.body.team},
+    {$push: {roster: {
+      name: req.body.name,
+      childDoB: req.body.childDoB,
+      address: req.body.address,
+      phone: req.body.phone
+    }}},
+    (error2) =>{
+      if (error2) throw error2;
+      console.log('Registration succesdul!');
+      res.json("success");
+    }
+  )
 })
 
 module.exports = router;
