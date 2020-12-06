@@ -11,3 +11,10 @@
 #address {
     color: yellow;
 }
+
+@media screen and (max-width: 768px) {
+    .footer {
+        width: 100%;
+        font-size: 16px;
+    }
+}

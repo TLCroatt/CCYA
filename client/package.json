@@ -5,6 +5,8 @@
   "proxy": "http://localhost:3001/",
   "secure": false,
   "dependencies": {
+    "@formspree/cli": "^0.9.5",
+    "@formspree/react": "^2.2.3",
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
     "@fortawesome/free-brands-svg-icons": "^5.15.1",
     "@fortawesome/free-solid-svg-icons": "^5.15.1",

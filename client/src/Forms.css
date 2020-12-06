@@ -9,6 +9,7 @@
     justify-content: center;
     font-family: 'PT Sans Narrow',
     sans-serif;
+    font-size: 20px;
 }
 
 #submitBtn, #signUpBtn {
@@ -18,6 +19,7 @@
 
 #addParticipantBtn {
     background-color: green;
+}
   
 .contact-card, .signup-card, .login-card, .members, .schedule, .register {
     background-color: white;
@@ -25,4 +27,10 @@
 
 .register-title {
     color: black;
+}
+
+@media screen and (max-width: 768px) {
+    .form-container {
+        width: 100%;
+    }
 }
