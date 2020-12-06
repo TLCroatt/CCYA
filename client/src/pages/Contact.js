@@ -19,9 +19,9 @@ class Contact extends React.Component {
         <div>
         <Container className="form-container">
             <div>
-                <Card className="contact-card">
+                <Card>
                     <CardImg top width="100%" src={SB7} alt="coach and player giving high five" />
-                    <CardBody>
+                    <CardBody className="contact-card">
                         <h2 className="contactTitle">Contact Us!</h2>
                         <hr />
                         <Form className="contactForm">

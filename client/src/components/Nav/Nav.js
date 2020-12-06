@@ -23,9 +23,8 @@ export const Navigation = (props) => {
   const toggle = () => setIsOpen(!isOpen);
 
   return (
-    <div>
       <Navbar className="navbar" light expand="md">
-        <NavbarBrand><NavLink tag={Link} to="/" id="nav-header">Commerce City Youth Athletics</NavLink></NavbarBrand>
+        <NavbarBrand tag={Link} to="/" id="nav-header">Commerce City Youth Athletics</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
@@ -58,7 +57,6 @@ export const Navigation = (props) => {
           </Nav>
         </Collapse>
       </Navbar>
-    </div>
   );
 }
 

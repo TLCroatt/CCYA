@@ -36,7 +36,7 @@ const Signup = () => {
         setValidFirstName(false);
         setErrorMessage({
           ...errorMessage,
-          firstname: 'First name should be at least 3 characters.',
+          firstname: 'First Name should be at least 3 characters.',
         });
       } else {
         setValidFirstName(true);
@@ -54,7 +54,7 @@ const Signup = () => {
         setValidLastName(false);
         setErrorMessage({
           ...errorMessage,
-          lastname: 'Last name should be at least 3 characters.',
+          lastname: 'First Name should be at least 3 characters.',
         });
       } else {
         setValidLastName(true);
@@ -116,7 +116,7 @@ const Signup = () => {
         setValidPassword(false);
         setErrorMessage({
           ...errorMessage,
-          password: 'Password should be at least 8 letters, 1 capital letter & 1 number',
+          password: 'Password should be at least 8 letters, 1 capital & 1 number',
         });
       } else {
         setValidPassword(true);
@@ -156,7 +156,7 @@ const Signup = () => {
               type="text"
               name="firstname"
               id="firstname"
-              placeholder="first name"
+              placeholder="firstname"
               value={userData.firstname}
               onChange={handleInputChange}
               onBlur={checkFirstname}
@@ -170,7 +170,7 @@ const Signup = () => {
               type="text"
               name="lastname"
               id="lastname"
-              placeholder="last name"
+              placeholder="lastname"
               value={userData.lastname}
               onChange={handleInputChange}
               onBlur={checkLastname}
@@ -250,7 +250,7 @@ const Signup = () => {
             </Button>
           )}
           <p className="signupLink">
-            <Link to="/login">Already have an account? Sign in here</Link>
+            <Link to="/login">already have an account? Sign in here</Link>
           </p>
         </Form>
       </div>

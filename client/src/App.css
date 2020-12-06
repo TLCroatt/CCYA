@@ -57,13 +57,18 @@ body {
     margin-bottom: 30px;
 }
 
-h5 {
+h5, .member-welcome, .calendar-title {
     font-size: 50px;
     font-family: 'Playball', cursive;
     font-weight: bold;
     color: green;
     text-decoration: underline;
     text-shadow: yellow 1px 1px 1px;
+}
+
+.profile {
+    color: black;
+    font-family: 'PT Sans Narrow', sans-serif;
 }
 
 #cardText {

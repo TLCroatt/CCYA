@@ -1,30 +1,33 @@
-import React, { Component } from "react";
+import React, { useContext } from "react";
 import { Calendar, momentLocalizer } from "react-big-calendar";
 import moment from "moment";
-import eventArray from "./events";
+// import eventArray from "./events";
 
 import "react-big-calendar/lib/css/react-big-calendar.css";
+import UserContext from "../utils/UserContext";
 
 const localizer = momentLocalizer(moment);
 
-class Schedule extends Component {
-  state = {
-    events: eventArray
-  };
+export const Schedule = () => {
+  const { calendarEvents, } = useContext(UserContext);
+  // fillEvents();
 
-  render() {
-    return (
-      <div className="App">
+  return (
+    <div className="App">
+      {(calendarEvents && calendarEvents.length > 0 ? 
         <Calendar
-          localizer={localizer}
-          defaultDate={new Date()}
-          defaultView="month"
-          events={this.state.events}
-          style={{ height: "100vh" }}
-        />
-      </div>
-    );
-  }
+        localizer={localizer}
+        defaultDate={new Date()}
+        defaultView="month"
+        events={ calendarEvents }
+        style={{ height: "100vh" }}
+      /> :
+      <h3>Calendar is loading</h3>
+      )}
+
+    </div>
+  );
 }
+
 
 export default Schedule;

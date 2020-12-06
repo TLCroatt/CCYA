@@ -14,6 +14,10 @@ export default {
   addChild: function (childData) {
     return axios.post("api/users/addChild", childData);
   },
+  
+  deleteParticipant: function (id){
+    return axios.post("api/users/removeParticipant", id);
+  },
 
   isLoggedIn: function () {
     return axios.get('/api/users/profile');
@@ -22,5 +26,12 @@ export default {
   logout: function () {
     return axios.get('/api/users/logout');
   },
-
+  
+  fillEvents: function () {
+    return axios.get("/api/users/fillEvents");
+  },
+  
+  register: function (regInfo) {
+    return axios.post("/api/users/register", regInfo);
+  }
 };

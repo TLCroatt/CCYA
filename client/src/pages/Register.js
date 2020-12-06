@@ -1,5 +1,5 @@
-import React from 'react';
-import { Container, Card, CardTitle, CardBody } from 'reactstrap';
+import React, { useContext } from 'react';
+import { Container, Card, CardBody } from 'reactstrap';
 import Registration from '..//components/Registration'
 
 
@@ -9,8 +9,7 @@ export const Register = () => {
     <Container className="form-container">
       <div>
       <Card>
-        <CardBody>
-          <CardTitle tag="h2">Register</CardTitle>
+        <CardBody className="register">
           <Registration />
         </CardBody>
       </Card>
