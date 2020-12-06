@@ -10,7 +10,8 @@
 
 **COMMERCE CITY YOUTH ATHLETICS**
 
-<img src="./client/src/assets/projectscreenshot2.png" alt="project image">
+<img width="1664" alt="Screen Shot 2020-12-05 at 3 26 56 PM" src="https://user-images.githubusercontent.com/65747246/101266684-7829b080-370e-11eb-9378-eeed7da55fc7.png">
+
 
 > AS a parent of a child interested in sports,
   I WANT to have a one-stop site that keeps mine and my child's information safe
@@ -88,6 +89,6 @@ Tyler Mathews
 
 
 
-<img width="1403" alt="Screen Shot 2020-12-05 at 11 21 28 AM" src="https://user-images.githubusercontent.com/65747246/101260306-32f48700-36ec-11eb-9aaf-906952b4e677.png">
+<img width="1608" alt="Screen Shot 2020-12-05 at 3 29 46 PM" src="https://user-images.githubusercontent.com/65747246/101266712-e2daec00-370e-11eb-84a0-7d0b6a9ed939.png">
 
 
