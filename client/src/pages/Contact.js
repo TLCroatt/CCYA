@@ -42,11 +42,7 @@ class Contact extends React.Component {
                             <Label for="message">Message</Label>
                             <Input type="textarea" name="message" id="message" />
                         </FormGroup>
-<<<<<<< Updated upstream
-                        {status === "SUCESS" ? <p>Thanks!</p> : <Button id="submitBtn" size="lg">Submit</Button>}
-=======
-                        {status === "SUCCESS" ? <p>Thanks!</p> : <Button color="success" size="lg">Submit</Button>}
->>>>>>> Stashed changes
+                        {status === "SUCCESS" ? <p>Thanks!</p> : <Button id="submitBtn" size="lg">Submit</Button>}
                         {status === "ERROR" && <p>Oops! There was an error.</p>}
                         </form>
                         </Form>

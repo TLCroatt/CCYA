@@ -43,7 +43,7 @@ const Registration = () => {
         <Input 
           type="text" 
             name="address" 
-            id="address" 
+            id="regaddress" 
             placeholder="123 this St, commerce City"
             value={childData.address}
             onChange={handleChildInputChange}  />            
