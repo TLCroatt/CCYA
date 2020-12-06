@@ -19,6 +19,7 @@ class Contact extends React.Component {
     <div>
       <Container className="form-container">
         <div>
+
           <Card>
             <CardImg top width="100%" src={SB7} alt="coach and player giving high five" />
               <CardBody className="contact-card">

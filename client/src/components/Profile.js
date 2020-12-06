@@ -15,7 +15,11 @@ export const Profile = () => {
           <Col id="registerBtn">
             <Button tag={Link} to={loggedIn ? "/register" : "/login"} color="success" size="md">Register</Button>
           </Col>
-          <Col id="kidInfo"> {childName}  {childDoB}  {address}</Col>
+          <Col id="kidInfo">
+            <Row> {childName} </Row>
+            <Row> {childDoB} </Row>
+            <Row> {address} </Row>
+          </Col>
           <Col id="removeBtn">
             <Button value={_id} onClick={() => handleRemoveChild(_id)} color="danger" size="md">Remove</Button>
           </Col>

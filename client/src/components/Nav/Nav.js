@@ -17,10 +17,11 @@ import {
 import './style.css';
 
 export const Navigation = (props) => {
-  const {loggedIn, logout} = useContext(UserContext);
+  const {loggedIn, logout, isAdmin} = useContext(UserContext);
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
+  let admin = isAdmin();
 
   return (
       <Navbar className="navbar" light expand="md">
@@ -33,7 +34,8 @@ export const Navigation = (props) => {
             </NavItem>
             <NavItem>
               <NavLink tag={Link} to="/contact" id="nav-text">Contact</NavLink>
-            </NavItem> 
+            </NavItem>
+            {admin && <NavItem><NavLink tag={Link} to="/admin" id="nav-text">Admin</NavLink></NavItem>} 
           </Nav>
           <Nav>
           <UncontrolledDropdown nav inNavbar>

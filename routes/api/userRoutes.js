@@ -123,7 +123,7 @@ router.post('/register', authMiddleware.isLoggedIn, (req, res, next) => {
     {name: req.body.team},
     {$push: {roster: {
       name: req.body.name,
-      childDoB: req.body.childDoB,
+      dob: req.body.childDoB,
       address: req.body.address,
       phone: req.body.phone
     }}},

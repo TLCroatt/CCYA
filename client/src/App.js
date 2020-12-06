@@ -9,6 +9,7 @@ import Members from "./pages/Members";
 import Navbar from "./components/Nav/Nav";
 import Calendar from "./components/Calendar";
 import Contact from "./pages/Contact";
+import Admin from "./pages/Admin";
 import './App.css';
 import UserContext from "./utils/UserContext";
 import API from "./utils/API"
@@ -189,6 +190,15 @@ const App = () => {
     }
   };
 
+  const isAdmin = () => {
+    if(loggedIn && user){
+      if(user.admin){
+        return true;
+      }else
+        return false;
+    } 
+  };
+
   const logout = () => {
     if (loggedIn) {
       API.logout().then(() => {
@@ -277,6 +287,7 @@ const App = () => {
     handleChildInputChange,
     handleRegistration,
     fillEvents,
+    isAdmin,
     logout,
   };
 
@@ -291,6 +302,7 @@ const App = () => {
               <Route path="/login" render={() => <LoginPage />}/>
               <Route path="/signup" render={() => <Signup />}/>
               <Route path="/teams" component={Teams} />
+              <Route path="/admin" component={Admin} />
               <Route path="/contact" component={Contact} />
               <Route path="/" component={Home} />
             </Switch>
