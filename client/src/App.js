@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./pages/Home";
-import Teams from "./pages/Teams";
 import Register from "./pages/Register";
 import LoginPage from "./pages/Login";
 import Signup from "./pages/Signup"
@@ -301,7 +300,6 @@ const App = () => {
               <Route path="/register" render={() => <Register />}/>
               <Route path="/login" render={() => <LoginPage />}/>
               <Route path="/signup" render={() => <Signup />}/>
-              <Route path="/teams" component={Teams} />
               <Route path="/admin" component={Admin} />
               <Route path="/contact" component={Contact} />
               <Route path="/" component={Home} />
