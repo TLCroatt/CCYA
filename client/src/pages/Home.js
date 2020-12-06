@@ -60,15 +60,15 @@ const Home = () => {
       <Row id="about">
         <Col>
           <h1 id="about-header">About Us</h1>
-          Commerce City Youth Athletics is a non-profit organization. We as a league are committed to honesty, integrity, and a commitment to provide low cost registration fees, so that as many children as possible may join the sport we provide. We offer a girls’ traveling softball team. We are able to provide the program through registration fees, fundraisers, and donations. All officers and coaches are non-paid volunteers.
+          Commerce City Youth Athletics is a non-profit organization. We as a league are committed to honesty, integrity, and a commitment to provide low cost registration fees, so that as many children as possible may join the sport we provide. The Lady Eagles are a girls’ traveling softball team. We are able to provide this program through registration fees, fundraisers, and donations. All officers and coaches are non-paid volunteers.
           <br />
           <br />
           No one involved in our program receives payment for the time, energy, and services they provide to CCYA.
-          Our Coaches, Team Parents, Committee members, and Board members take time away from their families to donate many hours a week to our organization. We hope that each and every one of you appreciates all that they give to our children. Please remember we are NOT a CITY operated or funded program.
-          We conduct very important fundraisers for our organization every year, that without, we would have to raise our registration fees. The money raised is used to pay for the equipment and uniforms, as well as, the cost of team fees, etc.
+          Our coaches, team parents, committee members, and board members take time away from their families to donate many hours a week to our organization. We hope that each and every one of you appreciates all that they give to our children. Please remember we are NOT a city operated or funded program.
+          We conduct very important fundraisers for our organization every year, that without, we would have to raise our registration fees.
           <br />
           <br />
-          The money raised is used to pay for the equipment, uniforms that we purchase, as well as the cost of team fees, etc. Please support these worth while fundraising projects. We do accept money donations.
+          The money raised is used to pay for the equipment and uniforms, as well as, the cost of team fees, etc. Please support these worth while fundraising projects. We do accept money donations.
           <br />
           <br />
           You can mail these donations to:
@@ -76,7 +76,9 @@ const Home = () => {
           <br />
           Commerce City Youth Athletics
           C/O Chuck Ingram
+          <br />
           6820 East 77th Avenue
+          <br />
           Commerce City, CO 80022
         </Col>
         <Col className="col-lg-1"></Col>

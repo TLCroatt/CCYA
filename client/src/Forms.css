@@ -11,4 +11,16 @@
     sans-serif;
 }
 
+#signUpBtn {
+    background-color: yellow;
+    color: black;
+}
 
+#submitBtn {
+    background-color: yellow;
+    color: black;
+}
+
+#addParticipantBtn {
+    background-color: green;
+}
