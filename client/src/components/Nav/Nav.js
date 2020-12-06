@@ -42,8 +42,8 @@ export const Navigation = (props) => {
               <DropdownToggle nav caret id="nav-options">
                 Options
               </DropdownToggle>
-              <DropdownMenu right>
-                <DropdownItem tag={Link} to="/login">
+              <DropdownMenu className="dropdown-menu">
+                <DropdownItem className="dropdown-item" tag={Link} to="/login">
                   Log In 
                 </DropdownItem>
                 <DropdownItem> 

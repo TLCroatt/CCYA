@@ -46,15 +46,16 @@ body {
 .card-text {
     color: rgb(211, 207, 207);
     margin-top: 40px;
-    font-size: 24px;
+    font-family: 'PT Sans Narrow',
+    sans-serif;
+    font-size: 20px;
 }
 
 .carousel {
-    border-radius: 5px;
     padding: 10px;
     max-width: 90%;
     max-height: 90%;
-    margin-bottom: 30px;
+    margin-top: 30px;
 }
 
 h5, .member-welcome, .calendar-title {
@@ -71,11 +72,6 @@ h5, .member-welcome, .calendar-title {
     font-family: 'PT Sans Narrow', sans-serif;
 }
 
-#cardText {
-    font-family: 'PT Sans Narrow',
-    sans-serif;
-    font-size: 20px;
-}
 
 #about-header {
     font-size: 50px;
@@ -86,11 +82,26 @@ h5, .member-welcome, .calendar-title {
     text-shadow:green 1px 1px 1px;
 }
 
-#about {
+.about {
     font-family: 'PT Sans Narrow',
     sans-serif;
     font-size: 20px;
     color: white;
     font-weight: bold;
     text-shadow: black 1px 1px 1px;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .about {
+        width: 100%;
+    }
+
+    .col-lg-1 {
+        display: none;
+    }
+
+    .carousel {
+        display: none;
+    }
 }

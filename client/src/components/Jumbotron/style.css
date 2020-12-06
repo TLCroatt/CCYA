@@ -1,8 +1,3 @@
-.jumbotron {
-    color: yellow;
-    text-shadow: black 0.2em 0.2em 0.2em; 
-}
-
 .display-2 {
     color: green;
     text-shadow: black 1px 1px 1px;
@@ -52,4 +47,18 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-  }
+}
+
+@media screen and (max-width: 768px) {
+    .display-2 {
+        font-size: 60px;
+    }
+
+    .lead, .quote {
+        font-size: 24px;
+    }
+
+    .hero-image {
+        width: 100%,
+    }
+}
