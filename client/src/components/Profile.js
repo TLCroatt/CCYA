@@ -6,19 +6,18 @@ import Register from "./Registration";
 export const Profile = () => {
   const { user, handleRemoveChild, handleAddChild,
     handleChildInputChange, childData } = useContext(UserContext);
-    console.log("Profile user", user);
   return (
     <CardText className="profile">
     {(user && user.participants.length > 0) ? (
-      user.participants.map(({childName, childDoB, address}) => {
+      user.participants.map(({_id, childName, childDoB, address}) => {
         return(
-        <Row>
+        <Row key={ _id }>
           <Col id="registerBtn">
             <Button Link to={ Register } color="success" size="md">Register</Button>
           </Col>
           <Col id="kidInfo"> {childName}  {childDoB}  {address}</Col>
           <Col id="removeBtn">
-            <Button onClick={handleRemoveChild} color="danger" size="md">Remove</Button>
+            <Button value={_id} onClick={() => handleRemoveChild(_id)} color="danger" size="md">Remove</Button>
           </Col>
         </Row>
         )

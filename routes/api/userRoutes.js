@@ -9,7 +9,6 @@ router.post('/login',passport.authenticate('local', {
   }),
   (req, res, next) => {
     console.log('sign in successful');
-    console.log(req.user);
     res.json({
       user: req.user,
       loggedIn: true,
@@ -60,7 +59,6 @@ router.post('/addchild', authMiddleware.isLoggedIn, (req, res, next) => {
     }}},
     (error2) =>{
       if (error2) throw error2;
-      console.log("Response fro api", res);
       console.log('participant saved!');
       res.redirect(307, '/api/users/login');
     }
@@ -92,11 +90,17 @@ router.get('/admin', authMiddleware.isAdmin, (req, res, next) => {
   });
 });
 
-router.get('/schedule/:teamName', (req, res, next) => {
-  db.Team.find({team: req.params.teamName}, {schedule: schedule}, (err, schedule) => {
-    if(err) throw err;
-    res.send(schedule);
-    })
-})
+router.post('/removeParticipant', authMiddleware.isLoggedIn, (req, res, next) => {
+  console.log("req.user._id", req.user._id);
+  console.log("req.body", req.body);
+  db.User.update(
+    {_id: req.user._id},
+    {$pull: { "participants" : { _id: req.body.childID }}},
+    (error2) =>{
+      if (error2) throw error2;
+      console.log('participant removed!');
+      res.redirect(307, '/api/users/login');
+  });
+});
 
 module.exports = router;

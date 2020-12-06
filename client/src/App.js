@@ -27,15 +27,18 @@ const App = () => {
     childDoB: "",
     address: "",
   })
+
+  const [teamList, setTeamList] = useState(null);
+  const [calendarEvents] = useState(null);
   const [loggedIn, setLoggedin] = useState(false);
   const [user, setUser] = useState(null);
   const [failureMessage, setFailureMessage] = useState(null);
 
   useEffect(() => {
-    console.log(user);
   isLoggedIn();
+  fillEvents();
   // eslint-disable-next-line
-  }, [user, setUser]);
+}, [user, setUser]);
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
@@ -57,7 +60,6 @@ const App = () => {
       API.login(data)
         .then((user) => {
           if (user.data.loggedIn) {
-            console.log("handleLog user", user);
             setLoggedin(true);
             setUser(user.data.user);
             console.log('log in successful');
@@ -127,16 +129,12 @@ const App = () => {
         API.addChild(data)
           .then((user) => {
             if (loggedIn) {
-              if (loggedIn) {
-                setLoggedin(true);
-                setUser(user.data.user);
-                console.log(user.data.user);
-                window.location.href = '/members';
-              } else {
-                console.log('something went wrong :(');
-                console.log(user.data);
-                setFailureMessage(user.data);
-              }
+              setUser(user.data.user);
+              window.location.href = '/members';
+            } else {
+              console.log('something went wrong :(');
+              console.log(user.data);
+              setFailureMessage(user.data);
             }
           })
           .catch((error) => {
@@ -149,8 +147,32 @@ const App = () => {
 
   }
 
-  const handleRemoveChild = (event) => {
-    console.log("entered handleRemoveChild");
+  const handleRemoveChild = (id) => {
+    console.log("RC_id", id);
+    try{
+      const data = {
+        childID: id
+      };
+      console.log("RCData", data);  
+      API.deleteParticipant(data)
+        .then((user) => {
+          if (loggedIn) {
+            setUser(user.data.user);
+            console.log('Participant removed');
+            window.location.href = '/members';
+          } else {
+            console.log('Something went wrong :(');
+            alert('Remove Failed, let Brian know');
+          }
+        })
+      .catch((error) => {
+        console.log(error);
+      });
+    } catch (error) {
+      console.log('App -> error', error);
+    }
+
+    
   }
 
   const isLoggedIn = () => {
@@ -176,12 +198,17 @@ const App = () => {
     }
   };
 
+  const fillEvents = () =>{
+    // API.setSchedule().then()
+  }
+
   const contextValue = {
     userData,
     loggedIn,
     user,
     failureMessage,
     childData,
+    calendarEvents,
     handleInputChange,
     handleLogin,
     handleSignup,

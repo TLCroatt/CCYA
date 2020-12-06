@@ -23,4 +23,8 @@ export default {
     return axios.get('/api/users/logout');
   },
 
+  deleteParticipant: function (id){
+    return axios.post("api/users/removeParticipant", id);
+  }
+
 };
