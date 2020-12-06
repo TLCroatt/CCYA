@@ -55,7 +55,7 @@
 ## Installation
 
 ```
-npm i -- on front end server and backend server
+npm install from root folder
 npm start -- start the development server on your localhost://
 ```
 
@@ -90,5 +90,3 @@ Tyler Mathews
 
 
 <img width="1608" alt="Screen Shot 2020-12-05 at 3 29 46 PM" src="https://user-images.githubusercontent.com/65747246/101266712-e2daec00-370e-11eb-84a0-7d0b6a9ed939.png">
-
-
