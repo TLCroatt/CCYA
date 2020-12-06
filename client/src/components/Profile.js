@@ -60,7 +60,7 @@ export const Profile = () => {
           onChange={handleChildInputChange}
         />
       </FormGroup>
-      <Button onClick={handleAddChild} color="success" size="md">
+      <Button onClick={handleAddChild} id="addParticipantBtn" size="md">
         Add Participant
       </Button>
     </Form>

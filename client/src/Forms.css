@@ -11,6 +11,14 @@
     sans-serif;
 }
 
+#submitBtn, #signUpBtn {
+    background-color: yellow;
+    color: black;
+}
+
+#addParticipantBtn {
+    background-color: green;
+  
 .contact-card, .signup-card, .login-card, .members, .schedule, .register {
     background-color: white;
 }

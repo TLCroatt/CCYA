@@ -245,7 +245,7 @@ const Signup = () => {
               Sign Up
             </Button>
           ) : (
-            <Button onClick={handleSignup} color="danger" size="lg" disabled>
+            <Button onClick={handleSignup} id="signUpBtn" size="lg" disabled>
               Sign Up
             </Button>
           )}

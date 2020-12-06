@@ -8,11 +8,11 @@ const Login = () => {
   const { userData, handleInputChange, handleLogin } = useContext(UserContext);
   return (
     <div>
-      <h2 className="loginTitle">Login</h2>
+      <h2 className="loginTitle">Log In</h2>
       <hr />
       <Form>
         <FormGroup className="form-group">
-          <Label for="username">Username</Label>
+          <Label for="username">Username:</Label>
           <Input
             type="text"
             name="username"
@@ -23,7 +23,7 @@ const Login = () => {
           />
         </FormGroup>
         <FormGroup className="form-group">
-          <Label for="password">Password</Label>
+          <Label for="password">Password:</Label>
           <Input
             type="password"
             name="password"
@@ -33,8 +33,8 @@ const Login = () => {
             onChange={handleInputChange}
           />
         </FormGroup>
-        <Button onClick={handleLogin} color="success" size="lg">
-          Login
+        <Button onClick={handleLogin} id="logInBtn" size="lg">
+          Log In
         </Button>
         <p>Don't have an account? <Link className="signup-link" to="/signup">Sign up here</Link>
         </p>
