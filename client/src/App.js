@@ -12,8 +12,6 @@ import Contact from "./pages/Contact";
 import './App.css';
 import UserContext from "./utils/UserContext";
 import API from "./utils/API"
-import { dateFnsLocalizer } from 'react-big-calendar';
-import Schedule from './components/Calendar';
 
 const App = () => {
   const [userData, setUserData] = useState({
@@ -27,18 +25,22 @@ const App = () => {
     name: "",
     childDoB: "",
     address: "",
+    team: "",
+    phone: "",
+    parent: "",
+    email: ""
   })
   const [teamList, setTeamList] = useState(null);
   const [calendarEvents, setCalendarEvents] = useState(null);
   const [loggedIn, setLoggedin] = useState(false);
   const [user, setUser] = useState(null);
   const [failureMessage, setFailureMessage] = useState(null);
-
-  useEffect(() => {
-  isLoggedIn();
-  fillEvents();
+  
+  useEffect( () => {
+    isLoggedIn();
+    fillEvents();
   // eslint-disable-next-line
-}, [user, setUser]);
+}, []);
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
@@ -199,6 +201,7 @@ const App = () => {
 
   const fillEvents = () =>{
     API.fillEvents().then((res) => {
+      // console.log(res);
       let teamArray = [];
       let scheduleArray = [];
       //loop through and format data
@@ -218,15 +221,45 @@ const App = () => {
             verses: tempSchArray[j].game
           };
           scheduleArray.push(event)
-        }        
-      }
+        };        
+      };
+
       //set data to state
       setTeamList(teamArray);
       setCalendarEvents(scheduleArray);
-      console.log("TeamList", teamList);
-      console.log("Cal Events", calendarEvents);
+      // console.log("calendarEvents Loaded");
+      // console.log("TeamList", teamList);
+      // console.log("Cal Events", calendarEvents);
     });
-  }
+  };
+
+  const handleRegistration = (event) => {
+    event.preventDefault();
+    console.log("Entered handleReg");
+    try {
+      const data = {
+        name: childData.name,
+        childDoB: childData.childDoB,
+        phone: childData.phone,
+        team: childData.team,
+        address: childData.address
+      };
+
+      if (childData.name && childData.phone) {
+        API.register(data)
+          .then((res) => {
+            if (res) {
+                console.log('Registration succesful');
+                window.location.href = '/';
+              } else {
+                console.log('something went wrong :(');
+              }
+            }
+      )   }
+    } catch (error) {
+      console.log('App -> error', error);
+    }
+  };
 
   const contextValue = {
     userData,
@@ -242,6 +275,8 @@ const App = () => {
     handleAddChild,
     handleRemoveChild,
     handleChildInputChange,
+    handleRegistration,
+    fillEvents,
     logout,
   };
 
@@ -252,7 +287,7 @@ const App = () => {
             <Switch>
               <Route path="/calendar" component={Calendar} />
               <Route path="/members" component={Members} />
-              <Route path="/register" component={Register} />
+              <Route path="/register" render={() => <Register />}/>
               <Route path="/login" render={() => <LoginPage />}/>
               <Route path="/signup" render={() => <Signup />}/>
               <Route path="/teams" component={Teams} />

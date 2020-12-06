@@ -29,5 +29,9 @@ export default {
   
   fillEvents: function () {
     return axios.get("/api/users/fillEvents");
+  },
+  
+  register: function (regInfo) {
+    return axios.post("/api/users/register", regInfo);
   }
 };

@@ -1,11 +1,11 @@
 import React, { useContext } from 'react';
 import { Row, Col, CardText, Button, Form, FormGroup, Input } from 'reactstrap';
 import UserContext from '../utils/UserContext';
-import Register from "./Registration";
+import { Link } from "react-router-dom";
 
 export const Profile = () => {
   const { user, handleRemoveChild, handleAddChild,
-    handleChildInputChange, childData } = useContext(UserContext);
+    handleChildInputChange, childData, loggedIn } = useContext(UserContext);
   return (
     <CardText className="profile">
     {(user && user.participants.length > 0) ? (
@@ -13,7 +13,7 @@ export const Profile = () => {
         return(
         <Row key={ _id }>
           <Col id="registerBtn">
-            <Button Link to={ Register } color="success" size="md">Register</Button>
+            <Button tag={Link} to={loggedIn ? "/register" : "/login"} color="success" size="md">Register</Button>
           </Col>
           <Col id="kidInfo"> {childName}  {childDoB}  {address}</Col>
           <Col id="removeBtn">

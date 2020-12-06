@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from 'reactstrap';
+import UserContext from '../../utils/UserContext';
 import "./style.css";
 
 export const Jumbo = () => {
+  const { loggedIn } = useContext(UserContext);
   return (
 
       <div className="hero-image">
@@ -13,7 +15,7 @@ export const Jumbo = () => {
         <hr className="my-2" />
         <p className="quote">"The only player you should try to be better than is the player you were yesterday." - Coach Ingram</p>
         <p className="lead">
-          <Button size ="lg" id="register-btn" tag={Link} to="/register">Register Here</Button>
+          <Button size ="lg" id="register-btn" tag={Link} to={loggedIn ? "/members" : "/login"}>Register Here</Button>
         </p>
         </div>
       </div>

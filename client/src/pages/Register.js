@@ -1,5 +1,5 @@
-import React from 'react';
-import { Container, Card, CardTitle, CardBody } from 'reactstrap';
+import React, { useContext } from 'react';
+import { Container, Card, CardBody } from 'reactstrap';
 import Registration from '..//components/Registration'
 
 

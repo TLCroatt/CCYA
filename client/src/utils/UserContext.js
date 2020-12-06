@@ -15,7 +15,9 @@ const UserContext = React.createContext({
   handleRegister: () => {},
   handleAddChild: () => {},
   handleRemoveChild: () => {},
-  handleChildInputChange: () => {}
+  handleChildInputChange: () => {},
+  handleRegistration: () => {},
+  fillEvents: () => {}
 });
 
 export default UserContext;

@@ -102,14 +102,14 @@ router.post('/removeParticipant', authMiddleware.isLoggedIn, (req, res, next) =>
 });
 
 router.get("/fillEvents", (req, res, next) => {
-  console.log("Entered userRoutes fillEvents");
+  // console.log("Entered userRoutes fillEvents");
   db.Team.find( {}, {name: 1, schedule: 1, _id: 0},
     (error2, result) =>{
       if (error2){
         throw error2;
       }
-      console.log("api/users/fillEvents has run");
-      console.log("userRoute Result", result);
+      // console.log("api/users/fillEvents has run");
+      // console.log("userRoute Result", result);
       res.json(result);
   });
   // db.Team.find().toArray((err, result) =>{
@@ -117,5 +117,22 @@ router.get("/fillEvents", (req, res, next) => {
   //   res.json(result);
   // })
 });
+
+router.post('/register', authMiddleware.isLoggedIn, (req, res, next) => {
+  db.Team.update(
+    {name: req.body.team},
+    {$push: {roster: {
+      name: req.body.name,
+      childDoB: req.body.childDoB,
+      address: req.body.address,
+      phone: req.body.phone
+    }}},
+    (error2) =>{
+      if (error2) throw error2;
+      console.log('Registration succesdul!');
+      res.json("success");
+    }
+  )
+})
 
 module.exports = router;
