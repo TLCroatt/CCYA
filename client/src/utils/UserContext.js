@@ -6,6 +6,8 @@ const UserContext = React.createContext({
   loggedIn: false,
   user: {},
   failureMessage: "",
+  teamList: [""],
+  calendarEvents: [{}],
   handleInputChange: () => {},
   handleLogin: () => {},
   handleSignup: () => {},

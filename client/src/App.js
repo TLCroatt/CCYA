@@ -13,6 +13,7 @@ import './App.css';
 import UserContext from "./utils/UserContext";
 import API from "./utils/API"
 import { dateFnsLocalizer } from 'react-big-calendar';
+import Schedule from './components/Calendar';
 
 const App = () => {
   const [userData, setUserData] = useState({
@@ -27,9 +28,8 @@ const App = () => {
     childDoB: "",
     address: "",
   })
-
   const [teamList, setTeamList] = useState(null);
-  const [calendarEvents] = useState(null);
+  const [calendarEvents, setCalendarEvents] = useState(null);
   const [loggedIn, setLoggedin] = useState(false);
   const [user, setUser] = useState(null);
   const [failureMessage, setFailureMessage] = useState(null);
@@ -148,7 +148,6 @@ const App = () => {
   }
 
   const handleRemoveChild = (id) => {
-    console.log("RC_id", id);
     try{
       const data = {
         childID: id
@@ -199,7 +198,34 @@ const App = () => {
   };
 
   const fillEvents = () =>{
-    // API.setSchedule().then()
+    API.fillEvents().then((res) => {
+      let teamArray = [];
+      let scheduleArray = [];
+      //loop through and format data
+      for (let i = 0; i < res.data.length; i++) {
+        teamArray.push(res.data[i].name);
+        let tempSchArray = res.data[i].schedule;
+        for (let j = 0; j < tempSchArray.length; j++) {
+          let event = {};
+          let parts = res.data[i].name.split(" ");
+          event.title = parts[2];
+          parts = tempSchArray[j].date.split("/");
+          event.start = new Date(parts[2], parts[1] - 1, parts[0]);
+          event.end = new Date(parts[2], parts[1] - 1, parts[0]);
+          event.resource = {
+            team: res.data[i].name,
+            location: tempSchArray[j].location,
+            verses: tempSchArray[j].game
+          };
+          scheduleArray.push(event)
+        }        
+      }
+      //set data to state
+      setTeamList(teamArray);
+      setCalendarEvents(scheduleArray);
+      console.log("TeamList", teamList);
+      console.log("Cal Events", calendarEvents);
+    });
   }
 
   const contextValue = {
@@ -209,6 +235,7 @@ const App = () => {
     failureMessage,
     childData,
     calendarEvents,
+    teamList,
     handleInputChange,
     handleLogin,
     handleSignup,

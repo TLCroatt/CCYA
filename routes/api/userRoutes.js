@@ -91,8 +91,6 @@ router.get('/admin', authMiddleware.isAdmin, (req, res, next) => {
 });
 
 router.post('/removeParticipant', authMiddleware.isLoggedIn, (req, res, next) => {
-  console.log("req.user._id", req.user._id);
-  console.log("req.body", req.body);
   db.User.update(
     {_id: req.user._id},
     {$pull: { "participants" : { _id: req.body.childID }}},
@@ -101,6 +99,23 @@ router.post('/removeParticipant', authMiddleware.isLoggedIn, (req, res, next) =>
       console.log('participant removed!');
       res.redirect(307, '/api/users/login');
   });
+});
+
+router.get("/fillEvents", (req, res, next) => {
+  console.log("Entered userRoutes fillEvents");
+  db.Team.find( {}, {name: 1, schedule: 1, _id: 0},
+    (error2, result) =>{
+      if (error2){
+        throw error2;
+      }
+      console.log("api/users/fillEvents has run");
+      console.log("userRoute Result", result);
+      res.json(result);
+  });
+  // db.Team.find().toArray((err, result) =>{
+  //   if(err) throw err;
+  //   res.json(result);
+  // })
 });
 
 module.exports = router;
