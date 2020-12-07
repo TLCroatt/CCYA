@@ -42,7 +42,7 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/ccya', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true,
-  useFineAndModify: false
+  useFindAndModify: false
 });
 
 // Start the API server
