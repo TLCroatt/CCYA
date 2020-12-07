@@ -15,11 +15,9 @@ export const Members = () => {
       <div>
         <Container>
           <CardGroup>
-            <Card>
-              <CardBody className="members">
+            <Card className="members">
                 <CardTitle className="member-welcome" tag="h3">Welcome {user && user.firstname} {user && user.lastname} </CardTitle>
                 <Profile />
-              </CardBody>
             </Card>
             <Card>
               <CardBody className="schedule">
