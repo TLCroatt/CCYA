@@ -1,13 +1,14 @@
 import React, { useContext } from 'react';
-import { Row, Col, CardText, Button, Form, FormGroup, Input } from 'reactstrap';
+import { Row, Col, CardBody, Button, Form, FormGroup, Input } from 'reactstrap';
 import UserContext from '../utils/UserContext';
 import { Link } from "react-router-dom";
+import "../Forms.css"
 
 export const Profile = () => {
   const { user, handleRemoveChild, handleAddChild,
     handleChildInputChange, childData, loggedIn } = useContext(UserContext);
   return (
-    <CardText className="profile">
+    <CardBody className="profile">
     {(user && user.participants.length > 0) ? (
       user.participants.map(({_id, childName, childDoB, address}) => {
         return(
@@ -30,7 +31,7 @@ export const Profile = () => {
       <Row> No participants added</Row>
     )}
 
-    <hr></hr>
+    <hr/>
     
     <h5>Add a new Participant</h5>
     <Form>
@@ -68,7 +69,7 @@ export const Profile = () => {
         Add Participant
       </Button>
     </Form>
-    </CardText>
+    </CardBody>
   );
 }
 
