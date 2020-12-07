@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/static/css/main.62aba3af.chunk.css",
+    "main.js": "/static/js/main.05b81423.chunk.js",
+    "main.js.map": "/static/js/main.05b81423.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.1e16facb.js",
+    "runtime-main.js.map": "/static/js/runtime-main.1e16facb.js.map",
+    "static/css/2.0768f66f.chunk.css": "/static/css/2.0768f66f.chunk.css",
+    "static/js/2.0a52a8d3.chunk.js": "/static/js/2.0a52a8d3.chunk.js",
+    "static/js/2.0a52a8d3.chunk.js.map": "/static/js/2.0a52a8d3.chunk.js.map",
+    "static/js/3.3a96db28.chunk.js": "/static/js/3.3a96db28.chunk.js",
+    "static/js/3.3a96db28.chunk.js.map": "/static/js/3.3a96db28.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.0768f66f.chunk.css.map": "/static/css/2.0768f66f.chunk.css.map",
+    "static/css/main.62aba3af.chunk.css.map": "/static/css/main.62aba3af.chunk.css.map",
+    "static/js/2.0a52a8d3.chunk.js.LICENSE.txt": "/static/js/2.0a52a8d3.chunk.js.LICENSE.txt",
+    "static/media/SB6.d3120d2c.JPG": "/static/media/SB6.d3120d2c.JPG",
+    "static/media/SB7.31bfbaa2.JPG": "/static/media/SB7.31bfbaa2.JPG",
+    "static/media/SBLogo.fc1a0fe7.jpg": "/static/media/SBLogo.fc1a0fe7.jpg",
+    "static/media/App.css": "/static/media/diamond.55e4ae77.jpg",
+    "static/media/style.css": "/static/media/softball.e4444126.jpeg",
+    "static/media/sponsors3.fafd5cae.png": "/static/media/sponsors3.fafd5cae.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1e16facb.js",
+    "static/css/2.0768f66f.chunk.css",
+    "static/js/2.0a52a8d3.chunk.js",
+    "static/css/main.62aba3af.chunk.css",
+    "static/js/main.05b81423.chunk.js"
+  ]
+}
